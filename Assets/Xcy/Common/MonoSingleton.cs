@@ -39,7 +39,7 @@ namespace Xcy.Common
 						_instance = instanceObj.AddComponent<T>();
 						if (!_destoryOnLoad)
 						{
-							Debug.Log(instanceName+"Instance");
+							//Debug.Log(instanceName+"Instance");
 							DontDestroyOnLoad(instanceObj); //保证实例例不不会被释放
 						}
 						Debug.LogFormat("Add New Singleton {0} in Game!", instanceName);

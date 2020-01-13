@@ -21,7 +21,7 @@ TagManager:
   - Enemy
   - Player
   - CheckPoint
-  - Collection
+  - PickUp
   - Trap
   - Background
   - Bound

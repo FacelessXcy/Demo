@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
@@ -8,8 +9,6 @@ using UnityEditor;
 
 public class PickUpItem : MonoBehaviour
 {
-    public bool UseGravityAtBegin;
-    public float rotatingSpeed = 360f;
     public AudioClip pickupClip;
     public UnityAction<InventorySystem> onPick;
     private Rigidbody2D _rigidbody;
@@ -31,12 +30,14 @@ public class PickUpItem : MonoBehaviour
         _rotate = true;
         gameObject.layer = LayerMask.NameToLayer("PickUp");
     }
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
+        
         PlayerInput playerInput =
             other.GetComponent<PlayerInput>();
         if (playerInput != null)
         {
+            Debug.Log("Player In");
             if (pickupClip != null)
             {
                 playerInput.GetComponent<AudioSource>()

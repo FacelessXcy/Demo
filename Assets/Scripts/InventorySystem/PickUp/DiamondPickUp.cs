@@ -2,19 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DiamondPickUpItem : MonoBehaviour
+public class DiamondPickUp : MonoBehaviour
 {
-    public int amount;
     private PickUpItem _pickUpItem;
     void Start()
     {
         _pickUpItem = GetComponent<PickUpItem>();
+        _pickUpItem.onPick = OnPickUp;
     }
-
 
     private void OnPickUp(InventorySystem inventorySystem)
     {
-        InventorySystem.Instance.AddAddItemAmount(,int amount)
+        inventorySystem.AddItemAmount(ItemType.Diamond,1);   
+        
     }
-
 }

@@ -11,7 +11,7 @@ using UnityEditor;
 public class PlayerManager : MonoSingleton<PlayerManager>
 {
     public float power;
-    public ParticleSystem particleSystem;
+    public ParticleSystem moveParticleSystem;
     private Health _health;
     public Health Health => _health;
     private ParticleSystem.EmissionModule _psEmissionModule;
@@ -26,8 +26,8 @@ public class PlayerManager : MonoSingleton<PlayerManager>
 
     private void Start()
     {
-        particleSystem = transform.Find("MoveParticle").GetComponent<ParticleSystem>();
-        _psEmissionModule = particleSystem.emission;
+        moveParticleSystem = transform.Find("MoveParticle").GetComponent<ParticleSystem>();
+        _psEmissionModule = moveParticleSystem.emission;
         _spriteRenderer=GetComponent<SpriteRenderer>();
         
         _health = GetComponent<Health>();
