@@ -612,12 +612,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af071f1c177126a40a6daa93ab711b9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!58 &201156097 stripped
-CircleCollider2D:
-  m_CorrespondingSourceObject: {fileID: 138396193263994234, guid: 96d1eebd962c7df43a40f326dc4614b2,
-    type: 3}
-  m_PrefabInstance: {fileID: 138396192489013265}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &201156098 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 138396193263994235, guid: 96d1eebd962c7df43a40f326dc4614b2,
@@ -1258,7 +1252,7 @@ Camera:
   far clip plane: 5000
   field of view: 40
   orthographic: 1
-  orthographic size: 10
+  orthographic size: 52.79
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1282,7 +1276,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -124.793625, y: -155.48888, z: -10}
   m_LocalScale: {x: 0.39999998, y: 0.39999998, z: 0.39999998}
   m_Children: []
   m_Father: {fileID: 0}
@@ -12094,7 +12088,7 @@ MonoBehaviour:
     - {fileID: 201156100}
     - {fileID: 201156099}
     - {fileID: 201156098}
-    - {fileID: 201156097}
+    - {fileID: 0}
     - {fileID: 0}
     - {fileID: 201156095}
     - {fileID: 201156094}
