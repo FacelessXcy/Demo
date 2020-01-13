@@ -71,7 +71,7 @@ public class GameManager : MonoBehaviour
         //保存当前Hp
         save.currentHp = GlobalObject.Instance.currentHp;
         //保存当前钻石数量
-        save.diamondCount = GlobalObject.Instance.GetIntValueInDictionary(GlobalObject.Instance.collectionDic, Collection.ItemType.diamond);
+        //save.diamondCount = GlobalObject.Instance.GetIntValueInDictionary(GlobalObject.Instance.collectionDic, Collection.ItemType.diamond);
 
         GameObject diamondsRoot = GameObject.Find("DiamondCollections");
         //GameObject[] diamondsO = GameObject.FindGameObjectsWithTag("diamond");//获取所有的collection
@@ -112,7 +112,7 @@ public class GameManager : MonoBehaviour
         GlobalObject.Instance.SetSavePlayerPos(save.playerPos);
         //Debug.Log(GlobalObject.Instance.GetSavePlayerPos());
         GlobalObject.Instance.currentHp = save.currentHp;
-        GlobalObject.Instance.SetIntValueInDictionary(GlobalObject.Instance.collectionDic, Collection.ItemType.diamond,save.diamondCount);
+        //GlobalObject.Instance.SetIntValueInDictionary(GlobalObject.Instance.collectionDic, Collection.ItemType.diamond,save.diamondCount);
         //GlobalObject.Instance.monstersPos = save.monstersPos;
         GameObject diamondRoot = GameObject.Find("DiamondCollections");
         Transform[] diamondAc = diamondRoot.transform.GetComponentsInChildren<Transform>();

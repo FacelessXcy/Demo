@@ -14,7 +14,6 @@ public class PlayerManager : MonoSingleton<PlayerManager>
     public ParticleSystem particleSystem;
     private Health _health;
     public Health Health => _health;
-    
     private ParticleSystem.EmissionModule _psEmissionModule;
     private SpriteRenderer _spriteRenderer;
 

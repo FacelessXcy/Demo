@@ -11,7 +11,7 @@ public class GlobalObject : MonoBehaviour
 
     public  int maxHp =6;
     public int currentHp =6;
-    public Dictionary<Collection.ItemType, int> collectionDic=new Dictionary<Collection.ItemType, int>();
+    //public Dictionary<Collection.ItemType, int> collectionDic=new Dictionary<Collection.ItemType, int>();
     public int energy=0;
     public int damage=1;
     [SerializeField]private Vector3 savePlayerPos;
@@ -46,14 +46,6 @@ public class GlobalObject : MonoBehaviour
     private void Awake()
     {
         GameManager.Instance.CreateGameManager();
-        if (!collectionDic.ContainsKey(Collection.ItemType.healItem))
-        {
-            collectionDic.Add(Collection.ItemType.healItem,0);
-        }
-        if (!collectionDic.ContainsKey(Collection.ItemType.diamond))
-        {
-            collectionDic.Add(Collection.ItemType.diamond, 0);
-        }
         if (instance == null)
         {
             DontDestroyOnLoad(gameObject);
@@ -66,41 +58,7 @@ public class GlobalObject : MonoBehaviour
         //Debug.Log("Awake执行");
         //Debug.Log(collectionDic);
     }
-    /// <summary>
-    /// 获取字典中的值
-    /// </summary>
-    /// <param name="dic">所要获取的字典</param>
-    /// <param name="itemType">所要获取的键值</param>
-    /// <returns></returns>
-    public int GetIntValueInDictionary(Dictionary<Collection.ItemType,int> dic,Collection.ItemType itemType)
-    {
-        foreach (KeyValuePair<Collection.ItemType,int> pair in dic)
-        {
-            if (pair.Key==itemType)
-            {
-                return pair.Value;
-            }
-        }
-        return 0;
-    }
-
-    /// <summary>
-    /// 修改字典中的值
-    /// </summary>
-    /// <param name="dic">所要修改的字典</param>
-    /// <param name="itemType">所要修改的键值</param>
-    /// <param name="value">所要修改的值</param>
-    public void SetIntValueInDictionary(Dictionary<Collection.ItemType, int> dic, Collection.ItemType itemType,int value)
-    {
-        foreach (KeyValuePair<Collection.ItemType, int> pair in dic)
-        {
-            if (pair.Key == itemType)
-            {
-                dic[pair.Key] = value;
-                return;
-            }
-        }
-    }
+   
 
     private void Update()
     {
@@ -118,7 +76,7 @@ public class GlobalObject : MonoBehaviour
             PlayerAttribute.instance.maxHp = this.maxHp;
             PlayerAttribute.instance.currentHp = this.currentHp;
             PlayerAttribute.instance.damage = this.damage;
-            PlayerManager.Instance.collectionDic = this.collectionDic;
+            //PlayerManager.Instance.collectionDic = this.collectionDic;
             PlayerAttribute.instance.energy = this.energy;
             if (AudioManager.Instance.csol==AudioManager.ChangeSceneOrLoad.Load)
             {
@@ -147,7 +105,7 @@ public class GlobalObject : MonoBehaviour
                 this.maxHp = PlayerAttribute.instance.maxHp;
                 this.currentHp = PlayerAttribute.instance.currentHp;
                 this.damage = PlayerAttribute.instance.damage;
-                this.collectionDic = PlayerManager.Instance.collectionDic;
+                //this.collectionDic = PlayerManager.Instance.collectionDic;
                 this.energy = PlayerAttribute.instance.energy;
             }
 

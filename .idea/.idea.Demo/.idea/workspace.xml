@@ -62,17 +62,18 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/DamagableWall.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerAttack.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GlobalObject.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Trap.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CheckPoint.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AliveZone.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/LoadingScene.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Collection.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/InventorySystem/InventorySystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/UpdateUI.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerAttribute.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/InventorySystem/PickUp/PickUpItem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GlobalObject.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Collection.cs" />
       </list>
     </option>
   </component>
@@ -142,6 +143,7 @@
       <workItem from="1578798745381" duration="18006000" />
       <workItem from="1578819618195" duration="53000" />
       <workItem from="1578893128806" duration="4891000" />
+      <workItem from="1578902266226" duration="1261000" />
     </task>
     <servers />
   </component>
@@ -155,7 +157,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
