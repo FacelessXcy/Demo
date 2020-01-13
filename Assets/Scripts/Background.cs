@@ -12,6 +12,7 @@ public class Background : MonoBehaviour
     public float parallaxXSpeed = 0.001F;
     public float parallaxYSpeed = 0.001F;
     public Image image;
+    public SpriteRenderer spriteRenderer;
     private Vector2 startCamPos;
     //private Vector2 offset;
     //private float horizontal = 0;
@@ -24,6 +25,7 @@ public class Background : MonoBehaviour
     private void OnEnable()
     {
         image = GetComponent<Image>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
         camera = Camera.main.transform;
        startCamPos = (Vector2)camera.position;
         
@@ -45,6 +47,7 @@ public class Background : MonoBehaviour
         else
             y = 0;
         image.material.mainTextureOffset= new Vector2(x, y);
+        //spriteRenderer.material.mainTextureOffset= new Vector2(x, y);
         //Debug.Log(x);
 
        // previousCamPos = (Vector2)camera.position;

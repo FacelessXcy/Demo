@@ -17,9 +17,11 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/InventorySystem/InventorySystem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerAttribute.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.lightweight@6.9.2/Runtime/2D/Light2D.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Collection.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ShakeCamera.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/InventorySystem/PickUp/DiamondPickUpItem.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ChangeScene.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerAttack.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/LoadingScene.cs" root0="FORCE_HIGHLIGHTING" />
@@ -54,7 +56,6 @@
         <option value="$PROJECT_DIR$/Assets/Xcy/PickUpItem/PickUpItem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PickUp/PickUpItem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerInput.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/Xcy/Battle/Damageable.cs" />
         <option value="$PROJECT_DIR$/Assets/Xcy/Battle/Health.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" />
@@ -69,11 +70,14 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/InventorySystem/InventorySystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/UpdateUI.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerAttribute.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/InventorySystem/PickUp/PickUpItem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GlobalObject.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Collection.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Background.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/InventorySystem/PickUp/PickUpItem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/InventorySystem/PickUp/DiamondPickUpItem.cs" />
       </list>
     </option>
   </component>
@@ -143,7 +147,8 @@
       <workItem from="1578798745381" duration="18006000" />
       <workItem from="1578819618195" duration="53000" />
       <workItem from="1578893128806" duration="4891000" />
-      <workItem from="1578902266226" duration="1703000" />
+      <workItem from="1578902266226" duration="5164000" />
+      <workItem from="1578911717496" duration="179000" />
     </task>
     <servers />
   </component>

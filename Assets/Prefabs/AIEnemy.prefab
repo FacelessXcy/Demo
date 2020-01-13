@@ -53,7 +53,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -61,6 +61,7 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -125,7 +126,8 @@ MonoBehaviour:
   playerTransform: {fileID: 0}
   colorAnimation: {fileID: 7455302530816048443}
   maxColliderTime: 2.8
-  reMakePoint: {fileID: 0}
+  reMakePoint:
+  - {fileID: 0}
   index: 0
   radius: 0.91
   alphaUp: {fileID: 7400000, guid: 1069e8984aca2184f8cb7a56a14e2211, type: 2}
@@ -135,6 +137,7 @@ MonoBehaviour:
   currentStayTime: 0
   random1: 0
   random2: 0
+  random3: 0
   colliderTime: 0
   meetBound: 0
   isCollidering: 0

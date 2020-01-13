@@ -30,7 +30,8 @@ public class PlayerMovement : MonoSingleton<PlayerMovement>
     public int jumpCount;
     public bool shouldJump;
 
-    private float _lastVelY;
+    private bool _fallToGround;
+    private float _lastLeaveGroundMaxY=0.0f;
     private float _horizontalMove;
     private Vector3 _currentForward;
     public override void Awake()
@@ -62,7 +63,7 @@ public class PlayerMovement : MonoSingleton<PlayerMovement>
         GroundMovementHandle();
         JumpHandle();
         _lastIsGround = isGround;
-        _lastVelY = _rigidbody2D.velocity.y;
+        //_lastLeaveGroundMaxY = transform.position.y;
     }
 
 
@@ -82,11 +83,23 @@ public class PlayerMovement : MonoSingleton<PlayerMovement>
     {
         if (isGround)
         {
-            if (_lastIsGround!=isGround&&_lastVelY<=0)//落地
+            if (_lastLeaveGroundMaxY-transform.position.y>=0)
+            {
+                _fallToGround = true;
+            }
+            if (_lastIsGround!=isGround&&_fallToGround)//落地
             {
                 jumpCount = maxJumpCount;
                 isJump = false;
                 shouldJump = false;
+            }
+            _lastLeaveGroundMaxY = transform.position.y;
+        }
+        else
+        {
+            if (_lastLeaveGroundMaxY<=transform.position.y)
+            {
+                _lastLeaveGroundMaxY = transform.position.y;
             }
         }
 

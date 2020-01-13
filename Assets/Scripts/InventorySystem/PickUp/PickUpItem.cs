@@ -16,46 +16,23 @@ public class PickUpItem : MonoBehaviour
     private Collider2D _collider;
 
     private bool _rotate;
-//    private bool _canPickup;
-    //[HideInInspector] public PickUpSubManager pickUpSubManager;
     private void Start()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
         _collider = GetComponent<Collider2D>();
         _collider.isTrigger = true;
-//        _canPickup = false;
-        ActivePickUp();
-    }
-
-    private void Update()
-    {
-        if (_rotate)
-        {
-            transform.Rotate(Vector3.up, rotatingSpeed * Time.deltaTime, Space.Self);
-        }
-    }
-
-    IEnumerator StartRotate()
-    {
-        yield return new WaitForSeconds(2.0f);
         ActivePickUp();
     }
 
     private void ActivePickUp()
     {
         //_canPickup = true;
-        transform.up = Vector3.up;
-        transform.position += Vector3.up;
         _rigidbody.isKinematic = true;
         _rotate = true;
         gameObject.layer = LayerMask.NameToLayer("PickUp");
     }
     private void OnTriggerEnter(Collider other)
     {
-//        if (!_canPickup)
-//        {
-//            return;
-//        }
         PlayerInput playerInput =
             other.GetComponent<PlayerInput>();
         if (playerInput != null)
@@ -65,10 +42,8 @@ public class PickUpItem : MonoBehaviour
                 playerInput.GetComponent<AudioSource>()
                     .PlayOneShot(pickupClip);
             }
-
             if (onPick != null)
             {
-//                _canPickup = false;
                 onPick.Invoke(InventorySystem.Instance);
                 Destroy(gameObject);
             }
