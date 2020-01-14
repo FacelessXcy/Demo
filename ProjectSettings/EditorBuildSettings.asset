@@ -6,12 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/ThursDay1.unity
+    path: Assets/Scenes/StartScene.unity
     guid: 4de664d116f516c44b5a326328fd9caf
   - enabled: 1
-    path: Assets/Scenes/Loading.unity
-    guid: d62f972640f14f8468de83add4dfe454
-  - enabled: 1
-    path: Assets/Scenes/ThursDay2.unity
+    path: Assets/Scenes/Game1Scene.unity
     guid: 1feb361e253bf5c4bbd72030372217a7
+  - enabled: 1
+    path: Assets/Scenes/LoadingScene.unity
+    guid: d62f972640f14f8468de83add4dfe454
   m_configObjects: {}

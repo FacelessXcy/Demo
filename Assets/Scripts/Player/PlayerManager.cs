@@ -43,8 +43,7 @@ public class PlayerManager : MonoSingleton<PlayerManager>
         PlayerMovement.Instance.Rigidbody2D.AddForce(((Vector2)(transform
         .position -damageSource.transform.position)*power));
         ShakeCamera.instance.enabled = true;//镜头抖动
-        UpdateUI.instance.UpdateHpUI((int)_health.currentHealth, 
-            (int)_health.maxHealth);//更新血量UI
+        UIManager.Instance.UpdateAllGamingUI();//更新血量UI
         StartCoroutine(ChangeColor());//受伤动画
         StartCoroutine(ParticlesSystemChange());
         //音效
@@ -67,12 +66,12 @@ public class PlayerManager : MonoSingleton<PlayerManager>
     
     IEnumerator OnDieCorout(Vector3 checkPoint)
     {
-        //PlayerController.instance.m_animator.SetTrigger("dead");//死亡动画
-        UpdateUI.instance.FadeAnimation();//屏幕变黑
-        yield return new WaitForSeconds(0.95f);
+        PlayerAnimatorController.Instance.SetDeadTrigger();
+        UIManager.Instance.FadeAnimation();
+        yield return new WaitForSeconds(1.0f);
         ResetHP();
         ResetPosition(checkPoint);
-        UpdateUI.instance.UpdateHpUI(_health.currentHealth,_health.maxHealth);
+        UIManager.Instance.UpdateAllGamingUI();
     }
     private void ResetHP()
     {

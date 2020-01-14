@@ -14,6 +14,7 @@ public class DiamondPickUp : MonoBehaviour
     private void OnPickUp(InventorySystem inventorySystem)
     {
         inventorySystem.AddItemAmount(ItemType.Diamond,1);   
+        UIManager.Instance.UpdateAllGamingUI();
         
     }
 }

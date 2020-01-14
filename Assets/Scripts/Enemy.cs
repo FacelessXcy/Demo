@@ -7,7 +7,6 @@ using Xcy.Battle;
 
 public class Enemy : MonoBehaviour
 {
-    private UpdateUI UI;
     private Transform ps;
     private ParticleSystem.EmissionModule emissionModule;
     
@@ -34,7 +33,6 @@ public class Enemy : MonoBehaviour
     private void Awake()
     {
         ps = transform.Find("BurstParticle");
-        UI = GameObject.Find("Canvas").GetComponent<UpdateUI>();
         enemyRenderer = GetComponent<SpriteRenderer>();
         meleeTransform = transform.Find("MeleeAttackPos");
         contactFilter.layerMask = layer;

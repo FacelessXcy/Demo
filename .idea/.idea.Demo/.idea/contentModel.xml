@@ -602,6 +602,7 @@
           </e>
           <e p="LoadingScene.cs" t="Include" />
           <e p="Player" t="Include">
+            <e p="PlayerAnimatorController.cs" t="Include" />
             <e p="PlayerAttack.cs" t="Include" />
             <e p="PlayerAttribute.cs" t="Include" />
             <e p="PlayerController.cs" t="Include" />
@@ -615,6 +616,10 @@
           <e p="ShakeCamera.cs" t="Include" />
           <e p="Trap.cs" t="Include" />
           <e p="UI" t="Include">
+            <e p="GamingUIPanel.cs" t="Include" />
+            <e p="PauseMenuPanel.cs" t="Include" />
+            <e p="StartMenuPanel.cs" t="Include" />
+            <e p="UIManager.cs" t="Include" />
             <e p="UpdateUI.cs" t="Include" />
           </e>
           <e p="WheelAI.cs" t="Include" />
@@ -669,12 +674,20 @@
             <e p="Bullet.cs" t="Include" />
             <e p="PlayerController.cs" t="Include" />
           </e>
+          <e p="SceneLoadManager" t="Include">
+            <e p="SceneLoadManager.cs" t="Include" />
+          </e>
           <e p="Tests" t="Include">
             <e p="Editor" t="Include">
               <e p="NewTestScript.cs" t="Include" />
             </e>
             <e p="Tests.asmdef" t="Include" />
             <e p="Try.cs" t="Include" />
+          </e>
+          <e p="UIFramework" t="Include">
+            <e p="BasePanel.cs" t="Include" />
+            <e p="UILoadPath.cs" t="Include" />
+            <e p="UIManagerBase.cs" t="Include" />
           </e>
           <e p="Utility" t="Include">
             <e p="Editor" t="Include">

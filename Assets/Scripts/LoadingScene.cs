@@ -3,15 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using Xcy.SceneLoadManager;
 
 public class LoadingScene : MonoBehaviour
 {
     public Slider loadingSlider;
     public Text loadingText;
-    private AsyncOperation loadSceneAO;
-    private float valueTarget;
-
-
+    
+    private AsyncOperation _loadSceneAO;
+    private bool _beginAO;
+    private float _runTime;
+    private float _valueTarget;
     void Start()
     {
         loadingSlider.value = 0;
@@ -25,38 +27,49 @@ public class LoadingScene : MonoBehaviour
 
     void Update()
     {
-        valueTarget = loadSceneAO.progress;
-        //Debug.Log(valueTarget);
-        if (valueTarget>=0.9f)
+        if (!_beginAO)
         {
-            valueTarget = 1;
-        }
-
-        if (valueTarget!=loadingSlider.value)
-        {
-            loadingSlider.value = Mathf.Lerp(loadingSlider.value,valueTarget,Time.deltaTime);
-            if (Mathf.Abs(loadingSlider.value-valueTarget)<0.01f)
+            _runTime += Time.deltaTime;
+            if (_runTime>=1.0f)
             {
-                loadingSlider.value = valueTarget;
+                StartCoroutine(AsyncLoading());
+                _beginAO = true;
             }
         }
-        loadingText.text = ((int)(loadingSlider.value*100)).ToString() + " %";
-        if (loadingSlider.value==1)
-        {
-            loadingText.text = "加载完成，按G键进入";
-            if (Input.GetKeyDown(KeyCode.G))
-            {
-                loadSceneAO.allowSceneActivation = true;
 
+        if (_loadSceneAO!=null)
+        {
+            _valueTarget = _loadSceneAO.progress;
+            if (_valueTarget>=0.9f)
+            {
+                _valueTarget = 1;
             }
-        } 
-        
+
+            if (_valueTarget!=loadingSlider.value)
+            {
+                loadingSlider.value = Mathf.Lerp(loadingSlider.value,_valueTarget,Time.deltaTime);
+                if (Mathf.Abs(loadingSlider.value-_valueTarget)<0.01f)
+                {
+                    loadingSlider.value = _valueTarget;
+                }
+            }
+            loadingText.text = ((int)(loadingSlider.value*100)).ToString() + " %";
+            if (loadingSlider.value==1)
+            {
+                loadingText.text = "加载完成，按G键进入";
+                if (Input.GetKeyDown(KeyCode.G))
+                {
+                    _loadSceneAO.allowSceneActivation = true;
+                }
+            } 
+        }
     }
     IEnumerator AsyncLoading()
     {
-        loadSceneAO = SceneManager.LoadSceneAsync(GlobalObject.Instance.sceneName);
-        loadSceneAO.allowSceneActivation = false;
-        yield return loadSceneAO;
+        _loadSceneAO = SceneManager.LoadSceneAsync(SceneLoadManager.Instance
+            .TargetSceneName);
+        _loadSceneAO.allowSceneActivation = false;
+        yield return _loadSceneAO;
     }
 
 }

@@ -4,57 +4,18 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.IO;
 using LitJson;
+using Xcy.Common;
+using Xcy.SceneLoadManager;
 
-public class GameManager : MonoBehaviour
+public class GameManager : MonoSingleton<GameManager>
 {
-    static GameManager instance;
-   
-    static public GameManager Instance
+    public override void Awake()
     {
-        get
-        {
-            if (instance == null)
-            {
-                //寻找该类实例，
-                instance = Object.FindObjectOfType(typeof(GameManager)) as GameManager;
-                //Debug.Log("Instance==Null");
-                if (instance == null)
-                {
-                    GameObject go = new GameObject("GameManager");
-                    DontDestroyOnLoad(go);
-                    instance = go.AddComponent<GameManager>();
-                }
-            }
-            return instance;
-        }
-    }
-    private void Awake()
-    {
-        if (instance == null)
-        {
-            instance = Object.FindObjectOfType(typeof(GameManager)) as GameManager;
-            //Debug.Log("GameManagerNull");
-            if (instance == null)
-            {
-                GameObject go = new GameObject("GameManager");
-                DontDestroyOnLoad(go);
-                instance = go.AddComponent<GameManager>();
-            }
-            DontDestroyOnLoad(gameObject);
-            instance = GetComponent<GameManager>();
-        }
-        else if (instance != null)
-        {
-            Debug.Log("GameManagerNotNull");
-            Destroy(gameObject);
-        }
-
-
+        base.Awake();
         if (GetComponent<CheckPoint>()==null)
         {
             gameObject.AddComponent<CheckPoint>();
         }
-       
         //Debug.Log(audioSource);
     }
 
@@ -173,11 +134,12 @@ public class GameManager : MonoBehaviour
     {
         //GlobalObject.Instance.SaveData();
         //SaveByJson();
-        GlobalObject.Instance.SetSavePlayerPos(PlayerAttribute.instance.transform.position);
+        GlobalObject.Instance.SetSavePlayerPos(PlayerManager.Instance
+            .transform.position);
         Save save = CreateSaveGO();
 
         Debug.Log("SaveGame");
-        ES3.Save<Save>("SaveGame",CreateSaveGO());
+        ES3.Save<Save>("SaveGame",save);
 
         //ES3.Save<Scene>
         
@@ -188,7 +150,8 @@ public class GameManager : MonoBehaviour
         Save save = ES3.Load<Save>("SaveGame");
         Debug.Log("LoadGame");
         setGame(save);
-        GlobalObject.Instance.LoadNewScene(save.sceneName);
+        //GlobalObject.Instance.LoadNewScene(save.sceneName);
+        SceneLoadManager.Instance.LoadNewScene(save.sceneName);
     }
 
     /// <summary>
@@ -226,6 +189,18 @@ public class GameManager : MonoBehaviour
             }
             damageableAc[i].gameObject.SetActive(list[i]);
         }
+    }
+
+    public void PauseGame()
+    {
+        PlayerInput.Instance.PauseGame();
+        Time.timeScale = 0;
+    }
+
+    public void ResumeGame()
+    {
+        PlayerInput.Instance.ResumeGame();
+        Time.timeScale = 1;
     }
 
     public void CreateGameManager()

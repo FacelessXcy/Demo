@@ -13,12 +13,8 @@ public class PlayerAttack : MonoSingleton<PlayerAttack>
     public LayerMask layerAttack;
 
     private AudioSource _audioSource;
-    private UpdateUI _UI;
     private Transform _meleeTransform;
     ContactFilter2D _contactFilter;
-    private Animator _animator;
-    private int attackID = Animator.StringToHash("attack");
-
     public bool inAttack;
     public float backPower;//攻击到目标后的后坐力
     //可在动画中修改
@@ -34,11 +30,9 @@ public class PlayerAttack : MonoSingleton<PlayerAttack>
     private void Start()
     {
         _audioSource = GetComponent<AudioSource>();
-        _UI = GameObject.Find("Canvas").GetComponent<UpdateUI>();
         _meleeTransform = transform.Find("MeleeAttackPos");
         _contactFilter.layerMask = layerAttack;
         _contactFilter.useLayerMask = true;
-        _animator = GetComponent<Animator>();
     }
 
     void Update()
@@ -51,7 +45,7 @@ public class PlayerAttack : MonoSingleton<PlayerAttack>
         if (PlayerInput.Instance.attack&&!inAttack)
         {         
             inAttack = true;
-            _animator.SetTrigger(attackID);
+            PlayerAnimatorController.Instance.SetAttackTrigger();
             //声音
             _audioSource.clip = Resources.Load<AudioClip>("PlayerAttack");
             _audioSource.Play();
@@ -64,7 +58,9 @@ public class PlayerAttack : MonoSingleton<PlayerAttack>
     IEnumerator takeMeleeDamage()
     {
         yield return new WaitForSeconds(0.3f);
-        Collider2D[] hitDamageable = Physics2D.OverlapCircleAll(_meleeTransform.position, 3.2f, layerAttack);
+        Collider2D[] hitDamageable =
+            Physics2D.OverlapCircleAll(_meleeTransform.position, 3.2f,
+                layerAttack);
         if (hitDamageable.Length != 0)
         {
             //Debug.Log("攻击到东西了");

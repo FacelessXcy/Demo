@@ -15,7 +15,6 @@ public class PlayerMovement : MonoSingleton<PlayerMovement>
     public Rigidbody2D Rigidbody2D => _rigidbody2D;
 
     private Collider2D _collider2D;
-    private Animator _animator;
 
     public float walkSpeed;
     public int maxJumpCount;
@@ -44,7 +43,6 @@ public class PlayerMovement : MonoSingleton<PlayerMovement>
     {
         _rigidbody2D = GetComponent<Rigidbody2D>();
         _collider2D = GetComponent<Collider2D>();
-        _animator = GetComponent<Animator>();
         jumpCount = maxJumpCount;
     }
 
@@ -75,6 +73,11 @@ public class PlayerMovement : MonoSingleton<PlayerMovement>
         if (_horizontalMove!=0)
         {
             transform.localScale=new Vector3(_horizontalMove>0?1:-1,1,1);
+            PlayerAnimatorController.Instance.SetMoveBool(true);
+        }
+        else
+        {
+            PlayerAnimatorController.Instance.SetMoveBool(false);
         }
         _currentForward=new Vector3(transform.localScale.x,0,0);
     }

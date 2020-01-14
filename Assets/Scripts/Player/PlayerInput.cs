@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Experimental.GlobalIllumination;
 using Xcy.Common;
 using Xcy.Input;
 #if UNITY_EDITOR
@@ -22,8 +23,6 @@ public class PlayerInput : MonoSingleton<PlayerInput>
 
     [Header("===== Output Signals=====")]
     public float keyboardHorizontal;
-
-
     public bool jump;
     public bool attack;
     
@@ -62,6 +61,16 @@ public class PlayerInput : MonoSingleton<PlayerInput>
         jump = false;
         attack = false;
         keyboardHorizontal = 0;
+    }
+
+    public void PauseGame()
+    {
+        gameIsPaused = true;
+    }
+
+    public void ResumeGame()
+    {
+        gameIsPaused = false;
     }
 
 }

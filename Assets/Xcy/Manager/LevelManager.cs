@@ -18,7 +18,6 @@ namespace Xcy.Manager
 		public static void Init(List<string> levelNames)
 		{
 			_levelNames = levelNames;
-
 			Index = 0;
 		}
 

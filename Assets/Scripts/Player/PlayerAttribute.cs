@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class PlayerAttribute : MonoBehaviour
 {
-    private UpdateUI UI;
     static public PlayerAttribute instance;
     public int currentHp =6;
     public int maxHp = 6;

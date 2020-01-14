@@ -87,7 +87,8 @@ public class GlobalObject : MonoBehaviour
                 PlayerAttribute.instance.transform.position = this.nextScenePos;//通过传送点进行场景切换
             }
             //否则采用场景默认位置
-            UpdateUI.instance.UpdateAllUI();
+            //UpdateUI.instance.UpdateAllUI();
+            UIManager.Instance.UpdateAllGamingUI();
         }
     }
 
