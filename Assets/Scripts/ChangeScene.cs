@@ -9,6 +9,7 @@ public class ChangeScene : MonoBehaviour
     public void OnClick()
     {
         Debug.Log("点击开始键，切换场景");
+        
         GlobalObject.Instance.SetNextScenePos(nextScenePos);
         GlobalObject.Instance.LoadNewScene(toScene);
         GlobalObject.Instance.SetNextScenePos(new Vector3(-177.4f,-218.6f,0));

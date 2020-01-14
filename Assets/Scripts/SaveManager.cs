@@ -1,11 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using Xcy.Common;
 
-public class GlobalObject : MonoSingleton<GlobalObject>
+public class SaveManager : MonoSingleton<SaveManager>
 {
+    
     public string sceneName;
     public int sceneIndex;
 
@@ -31,16 +31,7 @@ public class GlobalObject : MonoSingleton<GlobalObject>
         base.Awake();
         GameManager.Instance.CreateGameManager();
     }
-
-
-    private void Update()
-    {
-        //Debug.Log(GameManager.Instance.name);
-        //Debug.Log(SceneManager.GetActiveScene().name+"当前场景");
-        //Debug.Log(this.savePlayerPos+"当前保存玩家位置");
-    }
-
-
+    
     public void LoadData()//加载场景后，载入数据
     {
         //Debug.Log(GlobalObject.instance);
@@ -92,16 +83,16 @@ public class GlobalObject : MonoSingleton<GlobalObject>
         }
     }
 
-    public void LoadNewScene(string sceneName)
-    {
-        //保存场景数据
-        this.sceneName = sceneName;
-        //Debug.Log(savePlayerPos+"切换场景到Loading");
-        //保存游戏角色数据
-        SaveData();
-        SceneManager.LoadScene(1);
-        //Debug.Log("Global场景切换函数"); 
-    }
+//    public void LoadNewScene(string sceneName)
+//         {
+//             //保存场景数据
+//             this.sceneName = sceneName;
+//             //Debug.Log(savePlayerPos+"切换场景到Loading");
+//             //保存游戏角色数据
+//             SaveData();
+//             SceneManager.LoadScene(1);
+//             //Debug.Log("Global场景切换函数"); 
+//         }
 
     public Vector3 GetNextScenePos()
     {
@@ -121,5 +112,4 @@ public class GlobalObject : MonoSingleton<GlobalObject>
     {
         this.savePlayerPos = vector;
     }
-
 }

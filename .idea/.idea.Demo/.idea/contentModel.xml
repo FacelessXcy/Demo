@@ -612,6 +612,7 @@
           </e>
           <e p="PlayerToGround.cs" t="Include" />
           <e p="PM.cs" t="Include" />
+          <e p="SaveManager.cs" t="Include" />
           <e p="SceneLoad.cs" t="Include" />
           <e p="ShakeCamera.cs" t="Include" />
           <e p="Trap.cs" t="Include" />

@@ -46,11 +46,6 @@ public class PlayerManager : MonoSingleton<PlayerManager>
         UIManager.Instance.UpdateAllGamingUI();//更新血量UI
         StartCoroutine(ChangeColor());//受伤动画
         StartCoroutine(ParticlesSystemChange());
-        //音效
-//        if (PlayerAttribute.instance.currentHp <= 0&&!PlayerAttribute.instance.isDead)
-//        {
-//            PlayerAttribute.instance.OnDie(CheckPoint.instance.GetLastCheckPoint());
-//        }
     }
 
     private void OnDie()
@@ -87,8 +82,6 @@ public class PlayerManager : MonoSingleton<PlayerManager>
         _psEmissionModule.rateOverTime = 150;
         yield return new WaitForSeconds(0.1f);
         _psEmissionModule.rateOverTime = 10;
-
-
     }
 
     IEnumerator ChangeColor()
