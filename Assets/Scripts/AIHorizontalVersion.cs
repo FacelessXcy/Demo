@@ -268,24 +268,24 @@ public class AIHorizontalVersion : MonoBehaviour
         return;
     }
     /***********************碰撞检测范围辅助观察函数*****************************/
-    private void OnDrawGizmos()
-    {
-        Handles.color = new Color(1.0f, 0, 0, 0.1f);
-        Handles.DrawSolidDisc(downCheckPoint.position, Vector3.back, a);
-
-        Handles.color = new Color(1.0f, 0, 0, 0.1f);
-        Handles.DrawSolidDisc(upCheckPoint.position, Vector3.back, a);
-
-        Handles.color = new Color(1.0f, 1.0f, 0, 0.1f);
-        Handles.DrawSolidDisc(backViewPoint.position, Vector3.back, radius);
-
-        //Physics2D.OverlapBoxAll(,);
-        Handles.color = new Color(1.0f, 1.0f, 0.5f, 0.1f);
-        Handles.DrawWireCube(forwardViewPoint.position, size);
-
-        Handles.color = new Color(0f, 1.0f, 0, 0.1f);
-        Handles.DrawSolidDisc(attackRange.position, Vector3.back, attackRadius);
-    }
+//    private void OnDrawGizmos()
+//    {
+//        Handles.color = new Color(1.0f, 0, 0, 0.1f);
+//        Handles.DrawSolidDisc(downCheckPoint.position, Vector3.back, a);
+//
+//        Handles.color = new Color(1.0f, 0, 0, 0.1f);
+//        Handles.DrawSolidDisc(upCheckPoint.position, Vector3.back, a);
+//
+//        Handles.color = new Color(1.0f, 1.0f, 0, 0.1f);
+//        Handles.DrawSolidDisc(backViewPoint.position, Vector3.back, radius);
+//
+//        //Physics2D.OverlapBoxAll(,);
+//        Handles.color = new Color(1.0f, 1.0f, 0.5f, 0.1f);
+//        Handles.DrawWireCube(forwardViewPoint.position, size);
+//
+//        Handles.color = new Color(0f, 1.0f, 0, 0.1f);
+//        Handles.DrawSolidDisc(attackRange.position, Vector3.back, attackRadius);
+//    }
 
     private void OnDrawGizmosSelected()
     {

@@ -46,6 +46,18 @@ public class PlayerInput : MonoSingleton<PlayerInput>
             ResetSingal();
             return;
         }
+
+        if (Input.GetKey(KeyCode.LeftAlt))
+        {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
+        else
+        {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
+
         _buttonAttack.Tick(Input.GetKeyDown(keyAttack));
         _buttonJump.Tick(Input.GetButtonDown("Jump"));
 
