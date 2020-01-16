@@ -37,7 +37,7 @@ public class PickUpItem : MonoBehaviour
             other.GetComponent<PlayerInput>();
         if (playerInput != null)
         {
-            Debug.Log("Player In");
+            //Debug.Log("Player In");
             if (pickupClip != null)
             {
                 playerInput.GetComponent<AudioSource>()

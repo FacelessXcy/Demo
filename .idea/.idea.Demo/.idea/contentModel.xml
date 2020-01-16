@@ -1244,9 +1244,15 @@
           <e p="DamagableWall.cs" t="Include" />
           <e p="Enemy" t="Include">
             <e p="AI" t="Include">
+              <e p="ExitSeek.cs" t="Include" />
               <e p="IsInAttackRange.cs" t="Include" />
+              <e p="IsInSight.cs" t="Include" />
               <e p="IsInState.cs" t="Include" />
+              <e p="StartAttack.cs" t="Include" />
+              <e p="StartIdle.cs" t="Include" />
+              <e p="StartSeek.cs" t="Include" />
             </e>
+            <e p="EnemyInput.cs" t="Include" />
             <e p="EnemyStateController.cs" t="Include" />
           </e>
           <e p="Enemy.cs" t="Include" />
