@@ -33,6 +33,15 @@ public class PlayerMovement : MonoSingleton<PlayerMovement>
     private float _lastLeaveGroundMaxY=0.0f;
     private float _horizontalMove;
     private Vector3 _currentForward;
+
+    private bool _isInOil=false;
+
+    public bool IsInOil
+    {
+        get => _isInOil;
+        set => _isInOil = value;
+    }
+
     public override void Awake()
     {
         _destoryOnLoad = true;
@@ -68,8 +77,27 @@ public class PlayerMovement : MonoSingleton<PlayerMovement>
     private void GroundMovementHandle()
     {
         _horizontalMove = PlayerInput.Instance.keyboardHorizontal;
-        _rigidbody2D.velocity=new Vector2(_horizontalMove*walkSpeed,
-        _rigidbody2D.velocity.y);
+
+//        if (_isInOil)
+//        {
+            
+//        }
+//        else
+//        {
+//            _rigidbody2D.velocity=new Vector2(_horizontalMove*walkSpeed,
+//                0);
+//        }
+        if (_isInOil)
+        {
+            _rigidbody2D.velocity=new Vector2(_horizontalMove*walkSpeed*0.25f,
+                _rigidbody2D.velocity.y);
+        }
+        else
+        {
+            _rigidbody2D.velocity=new Vector2(_horizontalMove*walkSpeed,
+                _rigidbody2D.velocity.y);
+        }
+
         if (_horizontalMove!=0)
         {
             transform.localScale=new Vector3(_horizontalMove>0?1:-1,1,1);
@@ -105,7 +133,10 @@ public class PlayerMovement : MonoSingleton<PlayerMovement>
                 _lastLeaveGroundMaxY = transform.position.y;
             }
         }
-
+        if (_isInOil)
+        {
+            jumpCount = 2;
+        }
         if (shouldJump&&isGround)
         {
             isJump = true;

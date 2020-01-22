@@ -1257,6 +1257,7 @@
             <e p="EnemyInput.cs" t="Include" />
             <e p="EnemyStateController.cs" t="Include" />
             <e p="FallDown.cs" t="Include" />
+            <e p="OilBubble.cs" t="Include" />
           </e>
           <e p="Enemy.cs" t="Include" />
           <e p="ExitGame.cs" t="Include" />
