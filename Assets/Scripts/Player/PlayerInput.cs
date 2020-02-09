@@ -23,6 +23,7 @@ public class PlayerInput : MonoSingleton<PlayerInput>
 
     [Header("===== Output Signals=====")]
     public float keyboardHorizontal;
+    public float keyboardVertical;
     public bool jump;
     public bool attack;
     
@@ -36,6 +37,7 @@ public class PlayerInput : MonoSingleton<PlayerInput>
     private void Start()
     {
         keyboardHorizontal = 0;
+        keyboardVertical = 0;
     }
 
 
@@ -63,6 +65,7 @@ public class PlayerInput : MonoSingleton<PlayerInput>
 
 
         keyboardHorizontal = Input.GetAxis("Horizontal");
+        keyboardVertical = Input.GetAxis("Vertical");
         jump = _buttonJump.onPressed;
         attack = _buttonAttack.onPressed;
     }
@@ -73,6 +76,7 @@ public class PlayerInput : MonoSingleton<PlayerInput>
         jump = false;
         attack = false;
         keyboardHorizontal = 0;
+        keyboardVertical = 0;
     }
 
     public void PauseGame()

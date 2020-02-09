@@ -6,8 +6,7 @@ using Xcy.Battle;
 public class DamagableWall : MonoBehaviour
 {
     
-    private Animation _animation;
-    public AnimationClip animationClip;
+    private Animator _animator;
     private SpriteRenderer _spriteRenderer;
     private AudioSource _audioSource;
     private Health _health;
@@ -15,7 +14,7 @@ public class DamagableWall : MonoBehaviour
     {
         _health = GetComponent<Health>();
         _spriteRenderer = GetComponent<SpriteRenderer>();
-        _animation = GetComponent<Animation>();
+        _animator = GetComponent<Animator>();
         _audioSource = GetComponent<AudioSource>();
         _health.onDamaged = GetDamage;
         _health.onDied = OnDie;
@@ -36,8 +35,7 @@ public class DamagableWall : MonoBehaviour
     {
         //Debug.Log("死亡");
         _audioSource.Play();
-        _animation.clip = animationClip;
-        _animation.Play();
+        _animator.SetTrigger("Dead");
         StartCoroutine(DestoryWall());
     }
     IEnumerator DestoryWall()

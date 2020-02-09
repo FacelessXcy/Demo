@@ -1278,6 +1278,7 @@
             <e p="PlayerAttack.cs" t="Include" />
             <e p="PlayerAttribute.cs" t="Include" />
             <e p="PlayerController.cs" t="Include" />
+            <e p="PlayerFlyMovement.cs" t="Include" />
             <e p="PlayerInput.cs" t="Include" />
             <e p="PlayerManager.cs" t="Include" />
             <e p="PlayerMovement.cs" t="Include" />
@@ -1319,6 +1320,10 @@
           <e p="Common" t="Include">
             <e p="MonoSingleton.cs" t="Include" />
             <e p="Singleton.cs" t="Include" />
+          </e>
+          <e p="DanMuGongJi" t="Include">
+            <e p="BulletCharacter.cs" t="Include" />
+            <e p="FireMode.cs" t="Include" />
           </e>
           <e p="Factory" t="Include">
             <e p="FactoryManager.cs" t="Include" />
