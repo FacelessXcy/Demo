@@ -18,10 +18,13 @@ public class LoadingScene : MonoBehaviour
     {
         loadingSlider.value = 0;
         loadingText.text = (0*100).ToString() + " %";
-        if (SceneManager.GetActiveScene().name=="Loading")
-        {
-            StartCoroutine(AsyncLoading());
-        }
+//        if (SceneManager.GetActiveScene().name=="Loading")
+//        {
+//            StartCoroutine(AsyncLoading());
+//        }
+        _loadSceneAO=SceneManager.LoadSceneAsync(SceneLoadManager.Instance
+            .TargetSceneName);
+        _loadSceneAO.allowSceneActivation = false;
         Time.timeScale = 1;
     }
 
@@ -70,6 +73,7 @@ public class LoadingScene : MonoBehaviour
             .TargetSceneName);
         _loadSceneAO.allowSceneActivation = false;
         yield return _loadSceneAO;
+        Debug.Log("异步完成");
     }
 
 }

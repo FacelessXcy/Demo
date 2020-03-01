@@ -4973,7 +4973,7 @@ Rigidbody2D:
   m_GravityScale: 20
   m_Material: {fileID: 6200000, guid: 81a416b66b28b1e47a13ef5280a69757, type: 2}
   m_Interpolate: 0
-  m_SleepingMode: 1
+  m_SleepingMode: 0
   m_CollisionDetection: 0
   m_Constraints: 4
 --- !u!114 &138396193263994235
@@ -5136,6 +5136,7 @@ MonoBehaviour:
   gameIsPaused: 0
   keyAttack: f
   keyboardHorizontal: 0
+  keyboardVertical: 0
   jump: 0
   attack: 0
 --- !u!114 &201156096

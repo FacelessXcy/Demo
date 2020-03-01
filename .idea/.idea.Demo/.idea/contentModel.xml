@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\Xcy\.Rider2019.2\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\Xcy\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_Demo.-1492013957.00" t="ExcludeRecursive" />
+    <e p="D:\JetBrainInstall\rider\.Rider2019.2\system\extResources" t="IncludeRecursive" />
+    <e p="D:\JetBrainInstall\rider\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_Demo.-1492013957.00" t="ExcludeRecursive" />
     <e p="F:\Game(Work)\project\Demo" t="IncludeRecursive">
       <e p="Assembly-CSharp-Editor-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
@@ -1288,7 +1288,7 @@
           <e p="SaveManager.cs" t="Include" />
           <e p="SceneLoad.cs" t="Include" />
           <e p="ShakeCamera.cs" t="Include" />
-          <e p="Trap.cs" t="Include" />
+          <e p="TrapSonSon.cs" t="Include" />
           <e p="UI" t="Include">
             <e p="GamingUIPanel.cs" t="Include" />
             <e p="PauseMenuPanel.cs" t="Include" />
@@ -1297,6 +1297,10 @@
             <e p="UpdateUI.cs" t="Include" />
           </e>
           <e p="WheelAI.cs" t="Include" />
+        </e>
+        <e p="Test" t="Include">
+          <e p="Test2.cs" t="Include" />
+          <e p="TestScripts.cs" t="Include" />
         </e>
         <e p="Xcy" t="Include">
           <e p="AI" t="Include">

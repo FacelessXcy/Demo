@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1931794085242357589}
   - component: {fileID: 1931794085242357588}
-  - component: {fileID: 1931794085242357586}
   - component: {fileID: 235817781840655674}
+  - component: {fileID: 7324944800402299439}
   m_Layer: 13
   m_Name: Trap
   m_TagString: Untagged
@@ -73,7 +73,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 109ca000f622e0f4fbe7f661c35b8dc5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 0.16, y: 0.16}
@@ -82,19 +82,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1931794085242357586
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1931794085242357585}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3455e7328580aee4fb0db62c09c32eca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  layer: Player
 --- !u!61 &235817781840655674
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -121,3 +108,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 13.22, y: 4.059537}
   m_EdgeRadius: 0
+--- !u!114 &7324944800402299439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1931794085242357585}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 882a12c3c30674443b84fe23affa5463, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1
+  intervalTime: 1.5

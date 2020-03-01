@@ -636,6 +636,6 @@ PlayerSettings:
   projectName: Demo
   organizationId: wechat_os_qy03wamivbdhdp6zx4wkeab3m
   cloudEnabled: 0
-  enableNativePlatformBackendsForNewInputSystem: 0
+  enableNativePlatformBackendsForNewInputSystem: 1
   disableOldInputManagerSupport: 0
   legacyClampBlendShapeWeights: 0

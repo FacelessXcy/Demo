@@ -277,6 +277,8 @@ GameObject:
   - component: {fileID: 1161047891}
   - component: {fileID: 1161047892}
   - component: {fileID: 1161047890}
+  - component: {fileID: 1161047893}
+  - component: {fileID: 1161047894}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -349,6 +351,31 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!114 &1161047893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1161047889}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a694d9d09516b034cb9d88b53d2432ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1161047894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1161047889}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b00559e92ee5ae14a9d93cdfc8d50063, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  a: 0
 --- !u!1 &1299814634
 GameObject:
   m_ObjectHideFlags: 0
@@ -485,7 +512,7 @@ MonoBehaviour:
   openReferences: 0
   openPrefabs: 0
   idRef:
-    _Keys: 261b145751150864d21421b10fbe8c1e9ac7edfdce635804e553d5d1b76ff64c275765c466d7d622886ad43da5e3fb4ed64375ade88a05385f21dd094f1f745dffff2c90e57fb961db50831607341e33b7ca2d44a5cbd44fa262db784a208e5921cdc35bef73cb5776eb78c7f1e3c06b40105284f22fb8332bdded83a44016052122c82a0886dd44012a456ebc64be79deb9c7c532f5980e158f2f128548b349027de814acea7346cdf17be38bd80f6f5b1b5f7101331a03
+    _Keys: 261b145751150864d21421b10fbe8c1e9ac7edfdce635804e553d5d1b76ff64c275765c466d7d622886ad43da5e3fb4ed64375ade88a05385f21dd094f1f745dffff2c90e57fb961db50831607341e33b7ca2d44a5cbd44fa262db784a208e5921cdc35bef73cb5776eb78c7f1e3c06b40105284f22fb8332bdded83a44016052122c82a0886dd44012a456ebc64be79deb9c7c532f5980e158f2f128548b349027de814acea7346cdf17be38bd80f6f5b1b5f7101331a03a10d09c4d96f8f71dfc801a43ea7c77ae090c5277f333115ec60ed29e1a6f21d
     _Values:
     - {fileID: 1161047892}
     - {fileID: 1161047891}
@@ -510,6 +537,10 @@ MonoBehaviour:
     - {fileID: 21300000, guid: 777e1136d553a4704a73ec2e2575a260, type: 3}
     - {fileID: 2800000, guid: 777e1136d553a4704a73ec2e2575a260, type: 3}
     - {fileID: 630498017}
+    - {fileID: 11500000, guid: a694d9d09516b034cb9d88b53d2432ff, type: 3}
+    - {fileID: 11500000, guid: b00559e92ee5ae14a9d93cdfc8d50063, type: 3}
+    - {fileID: 1161047894}
+    - {fileID: 1161047893}
   prefabs: []
 --- !u!114 &2025811360
 MonoBehaviour:
