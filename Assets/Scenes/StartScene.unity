@@ -217,6 +217,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d57863776003b4640a9d70e534bee057, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  needLoadData: 0
 --- !u!4 &496794289
 Transform:
   m_ObjectHideFlags: 0
@@ -229,7 +230,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &496794290
 AudioSource:
@@ -803,12 +804,12 @@ MonoBehaviour:
     - {fileID: 379842465}
     - {fileID: 1086425720}
     - {fileID: 1165326867}
-    - {fileID: 2060428179}
+    - {fileID: 0}
     - {fileID: 1419157987}
     - {fileID: 876406375}
     - {fileID: 876406373}
     - {fileID: 379842467}
-    - {fileID: 2060428180}
+    - {fileID: 0}
     - {fileID: 1086425719}
     - {fileID: 876406372}
     - {fileID: 1307302407}
@@ -816,7 +817,7 @@ MonoBehaviour:
     - {fileID: 1419157985}
     - {fileID: 876406374}
     - {fileID: 379842466}
-    - {fileID: 2060428178}
+    - {fileID: 0}
     - {fileID: 1165326866}
     - {fileID: 21300000, guid: 7bc1d39e1e9b83449965c31ae62df919, type: 3}
     - {fileID: 21300002, guid: 7bc1d39e1e9b83449965c31ae62df919, type: 3}
@@ -895,7 +896,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1871920294 stripped
 GameObject:
@@ -921,59 +922,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 206a45e3f9e9f6d4b836c63e4ac9486f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &2060428178
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2060428180}
-  - component: {fileID: 2060428179}
-  m_Layer: 0
-  m_Name: GlobalControl
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &2060428179
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2060428178}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf03d8c6e2cd5bf4fa72f3c68d30fe15, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sceneName: 
-  sceneIndex: 0
-  maxHp: 6
-  currentHp: 6
-  energy: 0
-  damage: 1
-  savePlayerPos: {x: 0, y: 0, z: 0}
-  nextScenePos: {x: 0, y: 0, z: 0}
-  diamondsAct: 
-  damageableWallsAct: 
---- !u!4 &2060428180
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2060428178}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 329.91486, y: 221.14398, z: 5.874222}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &5848066942265929924
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
@@ -25,9 +26,10 @@ namespace Xcy.Battle
     
         private bool _isDead;
 
-        private void Start()
-        {
+        private void Awake()
+        { 
             currentHealth = maxHealth;
+            
         }
 
         public void Heal(int healingAmount)

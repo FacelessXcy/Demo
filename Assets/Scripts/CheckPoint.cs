@@ -18,7 +18,7 @@ public class CheckPoint : MonoSingleton<CheckPoint>
    {
        _destoryOnLoad = true;
        base.Awake();
-       _lastCheckPoint = GlobalObject.Instance.GetNextScenePos();
+       //_lastCheckPoint = GlobalObject.Instance.GetNextScenePos();
        //playerTransform = GameObject.Find("Player").transform;
    }
 

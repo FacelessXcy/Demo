@@ -79,7 +79,7 @@ public class GamingUIPanel : BasePanel
         colorAnimation.Play();
         yield return 1f;
     }
-    public void UpdateHpUI(float currentHp, float maxHp)
+    private void UpdateHpUI(float currentHp, float maxHp)
     {
         for (int i = 0; i < maxHp; i++)
         {
@@ -94,7 +94,7 @@ public class GamingUIPanel : BasePanel
         }
     }
     //收集物UI
-    public void UpdateDiamondCollection(int num)
+    private void UpdateDiamondCollection(int num)
     {
         collectionNum.text = num.ToString();
     }

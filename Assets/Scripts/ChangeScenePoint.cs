@@ -34,12 +34,12 @@ public class ChangeScenePoint : MonoBehaviour
 
     private void ChangeScene()
     {
-        GlobalObject.Instance.SaveData();
-        //SceneManager.LoadScene(toScene);
-        GlobalObject.Instance.LoadNewScene(toScene);
-        GlobalObject.Instance.SetNextScenePos(nextSceneBornPos);
-        AudioManager.Instance.ChangeScenePointPlayBGM(nextSceneMusicName);
-        //beforeChangeScene.Invoke(transform.position);
+//        GlobalObject.Instance.SaveData();
+//        //SceneManager.LoadScene(toScene);
+//        GlobalObject.Instance.LoadNewScene(toScene);
+//        GlobalObject.Instance.SetNextScenePos(nextSceneBornPos);
+//        AudioManager.Instance.ChangeScenePointPlayBGM(nextSceneMusicName);
+//        //beforeChangeScene.Invoke(transform.position);
     }
 
     private void OnTriggerExit2D(Collider2D collision)

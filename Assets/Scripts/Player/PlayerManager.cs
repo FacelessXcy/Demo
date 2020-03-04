@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Xcy.Battle;
 using Xcy.Common;
+using Xcy.SceneLoadManager;
 #if UNITY_EDITOR
 using UnityEditor;
 #endif
@@ -16,12 +17,16 @@ public class PlayerManager : MonoSingleton<PlayerManager>
     public Health Health => _health;
     private ParticleSystem.EmissionModule _psEmissionModule;
     private SpriteRenderer _spriteRenderer;
-
     public bool isDamaging=false;
     public override void Awake()
     {
         _destoryOnLoad = true;
         base.Awake();
+        if (GameManager.Instance.needLoadData)
+        {
+            GameManager.Instance.needLoadData = false;
+            GameManager.Instance.LoadData();
+        }
     }
 
     private void Start()
@@ -40,8 +45,8 @@ public class PlayerManager : MonoSingleton<PlayerManager>
     private void OnDamage(float realDamageAmount,GameObject damageSource)
     {
         isDamaging = true;//
-        PlayerMovement.Instance.Rigidbody2D.AddForce(((Vector2)(transform
-        .position -damageSource.transform.position)*power));
+//        PlayerMovement.Instance.Rigidbody2D.AddForce(((Vector2)(transform
+//        .position -damageSource.transform.position)*power));
         ShakeCamera.instance.enabled = true;//镜头抖动
         UIManager.Instance.UpdateAllGamingUI();//更新血量UI
         StartCoroutine(ChangeColor());//受伤动画

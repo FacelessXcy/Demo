@@ -22,8 +22,16 @@ public class LoadingScene : MonoBehaviour
 //        {
 //            StartCoroutine(AsyncLoading());
 //        }
-        _loadSceneAO=SceneManager.LoadSceneAsync(SceneLoadManager.Instance
-            .TargetSceneName);
+        if (SceneLoadManager.Instance.LoadMode==SceneLoadMode.LoadByName)
+        {
+            _loadSceneAO=SceneManager.LoadSceneAsync(SceneLoadManager.Instance
+                .TargetSceneName);
+        }
+        else
+        {
+            _loadSceneAO=SceneManager.LoadSceneAsync(SceneLoadManager.Instance
+                .TargetSceneIndex);
+        }
         _loadSceneAO.allowSceneActivation = false;
         Time.timeScale = 1;
     }

@@ -16,17 +16,19 @@ public enum EnemyState
 }
 public class EnemyStateController : MonoBehaviour
 {
-
+    public float damage=2;
     public float walkSpeed;
     [HideInInspector]public EnemyState enemyState;
     private Health _health;
     private Vector2 _currentForward;
     public Vector2 CurrentForward => _currentForward;
     private float _horizontal;
-    private Transform _playerTransform;
     private Rigidbody2D _rigidbody2D;
     private Animator _animator;
+    private SpriteRenderer _enemyRenderer;
     private Transform _eyesPosition;
+    private Transform _meleeTransform;
+    private Transform _playerTransform;
     public Transform EyesPosition => _eyesPosition;
 
     private float _exitSeekTimer;
@@ -53,8 +55,10 @@ public class EnemyStateController : MonoBehaviour
     {
         _rigidbody2D = GetComponent<Rigidbody2D>();
         _animator = GetComponent<Animator>();
+        _enemyRenderer = GetComponent<SpriteRenderer>();
         _playerTransform = GameObject.FindWithTag("Player").transform;
         _health = GetComponent<Health>();
+        _meleeTransform = transform.Find("MeleeAttackPos");
         _health.onDied += OnDied;
         _health.onDamaged += OnDamaged;
         _eyesPosition = transform.Find("EyesPosition");
@@ -154,10 +158,31 @@ public class EnemyStateController : MonoBehaviour
     private void Attack()
     {
         _inAttack = true;
-        
+        StartCoroutine(TakeMeleeDamage());
         _animator.SetTrigger(_attackID);
     }
-
+    IEnumerator TakeMeleeDamage()
+    {
+        yield return new WaitForSeconds(0.2f);
+        Collider2D[] hitCount = Physics2D.OverlapCircleAll(_meleeTransform.position, 3.2f);
+        if (hitCount.Length != 0)
+        {
+            //Debug.Log("攻击到东西了");
+            foreach (Collider2D item in hitCount)
+            {
+                if (item.gameObject.CompareTag("Player"))
+                {
+                    Damageable damageable= item
+                        .GetComponent<Damageable>();
+                    if (damageable != null)
+                    {
+                        //Debug.Log("击中敌人");
+                        damageable.GetDamage(damage,this.gameObject);
+                    }
+                }
+            }
+        }
+    }
     private void Walk()
     {
         _animator.SetBool(_moveID,true);
@@ -200,13 +225,28 @@ public class EnemyStateController : MonoBehaviour
     
     private void OnDied()
     {
+        StartCoroutine(Die());
         enemyState = EnemyState.Dead;
         _animator.SetTrigger(_deadID);
     }
 
+    IEnumerator Die()
+    {
+        yield return new  WaitForSeconds(0.5f);
+        Debug.Log("诖误阵亡");
+        gameObject.SetActive(false);
+    }
+
     private void OnDamaged(float realDamage,GameObject sourceGo)
     {
-        
+        Debug.Log("怪物被攻击到");
+        StartCoroutine(ChangeColor());
+    }
+    IEnumerator ChangeColor()
+    {
+        _enemyRenderer.color = Color.red;
+        yield return new WaitForSeconds(1);
+        _enemyRenderer.color = Color.white;
     }
 
 }

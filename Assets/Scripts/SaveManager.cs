@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using Xcy.Common;
 
 public class SaveManager : MonoSingleton<SaveManager>
@@ -8,108 +9,50 @@ public class SaveManager : MonoSingleton<SaveManager>
     
     public string sceneName;
     public int sceneIndex;
-
-    public  int maxHp =6;
-    public int currentHp =6;
-    //public Dictionary<Collection.ItemType, int> collectionDic=new Dictionary<Collection.ItemType, int>();
-    public int energy=0;
-    public int damage=1;
-    [SerializeField]private Vector3 savePlayerPos;
-    [SerializeField]private Vector3 nextScenePos=new Vector3(-176.7f,-222.9f,0);
-   // public bool isChangeScene = false;
-
-    //保存怪物的位置
-    //public List<Vector2> monstersPos = new List<Vector2>();
-    //保存宝石的Active
-    public List<bool> diamondsAct = new List<bool>();
-    //保存未破坏墙壁的Active
-    public List<bool> damageableWallsAct = new List<bool>();
-
+    public  float maxHp =6;
+    public float currentHp =6;
+    public float damage=1;
+    private Save _saveData;
 
     public override void Awake()
     {
+        _saveData=new Save();
         base.Awake();
-        GameManager.Instance.CreateGameManager();
+    }
+
+    //按照当前存储的状态创建存档文件
+    public Save CreateSaveGO()
+    {
+        SaveData();
+        return _saveData;
     }
     
     public void LoadData()//加载场景后，载入数据
     {
-        //Debug.Log(GlobalObject.instance);
-        if (PlayerAttribute.instance != null)
-        {
-            PlayerAttribute.instance.maxHp = this.maxHp;
-            PlayerAttribute.instance.currentHp = this.currentHp;
-            PlayerAttribute.instance.damage = this.damage;
-            //PlayerManager.Instance.collectionDic = this.collectionDic;
-            PlayerAttribute.instance.energy = this.energy;
-            if (AudioManager.Instance.csol==AudioManager.ChangeSceneOrLoad.Load)
-            {
-                PlayerAttribute.instance.transform.position = this.savePlayerPos;//载入存档时进行场景切换
-            }
-            if (AudioManager.Instance.csol== AudioManager.ChangeSceneOrLoad.ChangeScene)
-            {
-                PlayerAttribute.instance.transform.position = this.nextScenePos;//通过传送点进行场景切换
-            }
-            //否则采用场景默认位置
-            //UpdateUI.instance.UpdateAllUI();
-            UIManager.Instance.UpdateAllGamingUI();
-        }
+        PlayerManager.Instance.Health.maxHealth = _saveData.maxHp;
+        PlayerManager.Instance.Health.currentHealth =
+            _saveData.currentHp;
+        PlayerAttack.Instance.damage = _saveData.damage;
+        UIManager.Instance.UpdateAllGamingUI();
     }
 
-    public void SaveData()//切换场景时，保存数据
+    private void SaveData()//切换场景时，保存数据
     {
-        if (PlayerAttribute.instance != null)
-        {
-            //Debug.Log(SceneManager.GetActiveScene().name);
-            if (AudioManager.Instance.csol==AudioManager.ChangeSceneOrLoad.Load)//载入存档时，save对象已经给GlobalObject赋值，不用再次赋值
-            {
-                return;
-            }
-            else//切换场景时，需要保存当前角色状态信息
-            {                
-                this.maxHp = PlayerAttribute.instance.maxHp;
-                this.currentHp = PlayerAttribute.instance.currentHp;
-                this.damage = PlayerAttribute.instance.damage;
-                //this.collectionDic = PlayerManager.Instance.collectionDic;
-                this.energy = PlayerAttribute.instance.energy;
-            }
-
-            //Debug.Log(this.savePlayerPos);
-            //Debug.Log(this.currentHp);
-            //Debug.Log(this.maxHp);
-            //Debug.Log(this.damage);
-            //Debug.Log(this.collectionDic);
-            //Debug.Log(this.energy);
-        }
+        _saveData.maxHp = PlayerManager.Instance.Health.maxHealth;
+        _saveData.currentHp = PlayerManager.Instance.Health.currentHealth;
+        _saveData.damage = PlayerAttack.Instance.damage;
+        _saveData.sceneIndex = SceneManager.GetActiveScene().buildIndex;
+        //sceneName = SceneManager.GetActiveScene().name;
     }
 
-//    public void LoadNewScene(string sceneName)
-//         {
-//             //保存场景数据
-//             this.sceneName = sceneName;
-//             //Debug.Log(savePlayerPos+"切换场景到Loading");
-//             //保存游戏角色数据
-//             SaveData();
-//             SceneManager.LoadScene(1);
-//             //Debug.Log("Global场景切换函数"); 
-//         }
-
-    public Vector3 GetNextScenePos()
+    public void SetSaveData(Save data)
     {
-        return nextScenePos;
-    }
-    public void SetNextScenePos(Vector3 vector3)
-    {
-        this.nextScenePos = vector3;
+        _saveData = data;
     }
 
-    public Vector3 GetSavePlayerPos()
+    public Save GetSaveData()
     {
-        return savePlayerPos;
+        return _saveData;
     }
 
-    public void SetSavePlayerPos(Vector3 vector)
-    {
-        this.savePlayerPos = vector;
-    }
 }

@@ -14,9 +14,7 @@ public class PlayerAttack : MonoSingleton<PlayerAttack>
 
     private AudioSource _audioSource;
     private Transform _meleeTransform;
-    ContactFilter2D _contactFilter;
     public bool inAttack;
-    public float backPower;//攻击到目标后的后坐力
     //可在动画中修改
 
 
@@ -31,8 +29,6 @@ public class PlayerAttack : MonoSingleton<PlayerAttack>
     {
         _audioSource = GetComponent<AudioSource>();
         _meleeTransform = transform.Find("MeleeAttackPos");
-        _contactFilter.layerMask = layerAttack;
-        _contactFilter.useLayerMask = true;
     }
 
     void Update()
@@ -60,7 +56,7 @@ public class PlayerAttack : MonoSingleton<PlayerAttack>
         yield return new WaitForSeconds(0.3f);
         Collider2D[] hitDamageable =
             Physics2D.OverlapCircleAll(_meleeTransform.position, 3.2f,
-                layerAttack);
+                layerAttack.value);
         if (hitDamageable.Length != 0)
         {
             //Debug.Log("攻击到东西了");

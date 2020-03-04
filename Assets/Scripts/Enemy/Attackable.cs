@@ -32,7 +32,7 @@ public class Attackable : MonoBehaviour
     }
     private void OnTriggerStay2D(Collider2D other)
     {
-        Debug.Log(other.name);
+        //Debug.Log(other.name);
         if (_active)
         {
             Damageable damageable = other.GetComponent<Damageable>();

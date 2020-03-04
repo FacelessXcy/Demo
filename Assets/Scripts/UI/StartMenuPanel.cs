@@ -27,6 +27,11 @@ public class StartMenuPanel : BasePanel
         });
     }
 
+    public void LoadGame()
+    {
+        GameManager.Instance.LoadOnFile(true);
+    }
+
     public override void OnEnter()
     {
         base.OnEnter();

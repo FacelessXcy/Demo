@@ -67,7 +67,7 @@ public class Enemy : MonoBehaviour
     private void Attack()
     {
         animator.SetTrigger(attackID);
-        StartCoroutine("takeMeleeDamage");
+        StartCoroutine(takeMeleeDamage());
         //inAttack = true;
     }
 

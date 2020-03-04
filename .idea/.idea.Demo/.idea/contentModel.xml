@@ -830,11 +830,6 @@
             <e p="ES2UserType_UnityEngineUIText.cs" t="Include" />
           </e>
         </e>
-        <e p="Easy Save 3" t="Include">
-          <e p="Types" t="Include">
-            <e p="ES3Type_Save.cs" t="Include" />
-          </e>
-        </e>
         <e p="link.xml" t="Include" />
         <e p="NewScripts" t="Include">
           <e p="AudioManager.cs" t="Include" />
@@ -1264,7 +1259,6 @@
           <e p="FSMEnemyExit.cs" t="Include" />
           <e p="FSMExit.cs" t="Include" />
           <e p="GameManager.cs" t="Include" />
-          <e p="GlobalObject.cs" t="Include" />
           <e p="InventorySystem" t="Include">
             <e p="InventorySystem.cs" t="Include" />
             <e p="PickUp" t="Include">
@@ -1276,7 +1270,6 @@
           <e p="Player" t="Include">
             <e p="PlayerAnimatorController.cs" t="Include" />
             <e p="PlayerAttack.cs" t="Include" />
-            <e p="PlayerAttribute.cs" t="Include" />
             <e p="PlayerController.cs" t="Include" />
             <e p="PlayerFlyMovement.cs" t="Include" />
             <e p="PlayerInput.cs" t="Include" />
