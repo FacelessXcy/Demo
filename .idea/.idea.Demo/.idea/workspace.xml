@@ -23,6 +23,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/StartMenuPanel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Behavior Designer Movement/Scripts/Tasks/Patrol.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4CD14385-55E6-4C0E-AEDA-2393D3C9CF4A/f4/017ce60c/Object.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/NiQiang.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Behavior Designer Movement/Scripts/Tasks/NavMeshMovement.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ShakeCamera.cs" root0="FORCE_HIGHLIGHTING" />
@@ -42,8 +43,10 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/AI/ExitSeek.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/TrapSonSon.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/InventorySystem/PickUp/DingXiangYuPickUp.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Xcy/SceneLoadManager/SceneLoadManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CheckPoint.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/InventorySystem/PickUp/HaiZaoPickUp.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Xcy/Common/MonoSingleton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/AI/StartIdle.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Background.cs" root0="FORCE_HIGHLIGHTING" />
@@ -76,6 +79,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/8273D6B1-0578-4BEA-B3B1-F76A8D030C0C/21/329b4c29/Task.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/8273D6B1-0578-4BEA-B3B1-F76A8D030C0C/1e/e2e8c916/BehaviorSource.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/NewScripts/AudioManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/ZuoYouMove.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Behavior Designer/Runtime/Tasks/Conditionals/Physics/HasEnteredCollision2D.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/8273D6B1-0578-4BEA-B3B1-F76A8D030C0C/29/1253b12d/SharedVariable`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Test/TestScripts.cs" root0="FORCE_HIGHLIGHTING" />
@@ -106,12 +110,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Xcy/UIFramework/UIManagerBase.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/InventorySystem/PickUp/DiamondPickUp.cs" />
-        <option value="$PROJECT_DIR$/Assets/Xcy/SceneManager/SceneLoadManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Xcy/Manager/LevelManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerAnimatorController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/AI/CanSeePlayer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/AI/IsInState.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/AI/IsInAttackRange.cs" />
@@ -124,16 +122,12 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/AI/StartIdle.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/AI/StartAttack.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/FallDown.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/ElectricEel.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/OilBubble.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/DamagableWall.cs" />
-        <option value="$PROJECT_DIR$/Assets/Xcy/Utility/SimpleObjectPool.cs" />
         <option value="$PROJECT_DIR$/Assets/Xcy/DanMuGongJi/BulletCharacter.cs" />
         <option value="$PROJECT_DIR$/Assets/Xcy/DanMuGongJi/FireMode.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerInput.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerFlyMovement.cs" />
-        <option value="$PROJECT_DIR$/Assets/Test/TestScripts.cs" />
         <option value="$PROJECT_DIR$/Assets/Test/Test2.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Trap.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/TrapSonSon.cs" />
@@ -157,6 +151,16 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/Attackable.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyStateController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Xcy/Utility/SimpleObjectPool.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/InventorySystem/PickUp/DingXiangYuPickUp.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/InventorySystem/PickUp/HaiZaoPickUp.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/InventorySystem/InventorySystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/InventorySystem/PickUp/DiamondPickUp.cs" />
+        <option value="$PROJECT_DIR$/Assets/Test/TestScripts.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/ZuoYouMove.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/NiQiang.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/ElectricEel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" />
       </list>
     </option>
   </component>
@@ -244,6 +248,11 @@
       <workItem from="1582895616786" duration="3746000" />
       <workItem from="1582960442514" duration="8721000" />
       <workItem from="1583126684937" duration="24804000" />
+      <workItem from="1583478810320" duration="1739000" />
+      <workItem from="1587822822205" duration="1263000" />
+      <workItem from="1587824983010" duration="2369000" />
+      <workItem from="1587830176116" duration="1890000" />
+      <workItem from="1587883711444" duration="3840000" />
     </task>
     <servers />
   </component>

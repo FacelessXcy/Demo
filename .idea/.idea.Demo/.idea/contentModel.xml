@@ -1252,7 +1252,9 @@
             <e p="EnemyInput.cs" t="Include" />
             <e p="EnemyStateController.cs" t="Include" />
             <e p="FallDown.cs" t="Include" />
+            <e p="NiQiang.cs" t="Include" />
             <e p="OilBubble.cs" t="Include" />
+            <e p="ZuoYouMove.cs" t="Include" />
           </e>
           <e p="Enemy.cs" t="Include" />
           <e p="ExitGame.cs" t="Include" />
@@ -1263,6 +1265,8 @@
             <e p="InventorySystem.cs" t="Include" />
             <e p="PickUp" t="Include">
               <e p="DiamondPickUp.cs" t="Include" />
+              <e p="DingXiangYuPickUp.cs" t="Include" />
+              <e p="HaiZaoPickUp.cs" t="Include" />
               <e p="PickUpItem.cs" t="Include" />
             </e>
           </e>

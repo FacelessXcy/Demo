@@ -77,16 +77,7 @@ public class PlayerMovement : MonoSingleton<PlayerMovement>
     private void GroundMovementHandle()
     {
         _horizontalMove = PlayerInput.Instance.keyboardHorizontal;
-
-//        if (_isInOil)
-//        {
-            
-//        }
-//        else
-//        {
-//            _rigidbody2D.velocity=new Vector2(_horizontalMove*walkSpeed,
-//                0);
-//        }
+        
         if (_isInOil)
         {
             _rigidbody2D.velocity=new Vector2(_horizontalMove*walkSpeed*0.25f,
@@ -100,7 +91,12 @@ public class PlayerMovement : MonoSingleton<PlayerMovement>
 
         if (_horizontalMove!=0)
         {
-            transform.localScale=new Vector3(_horizontalMove>0?1:-1,1,1);
+            float sign = _horizontalMove>0?1:-1;
+            transform.localScale=new Vector3(
+                sign*Mathf.Abs(transform.localScale.x),
+                transform.localScale.y,
+                transform.localScale
+            .z);
             PlayerAnimatorController.Instance.SetMoveBool(true);
         }
         else

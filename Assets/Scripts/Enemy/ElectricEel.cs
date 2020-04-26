@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Xcy.Battle;
 
 public class ElectricEel : MonoBehaviour
 {
@@ -21,15 +22,19 @@ public class ElectricEel : MonoBehaviour
     private void FixedUpdate()
     {
         _targetDir = _player.position - transform.position;
-        _currentDir = Vector2.Lerp(transform.up, _targetDir, 0.015f);
-        transform.up = _currentDir;
+        _currentDir = Vector2.Lerp(transform.right, _targetDir, 0.015f);
+        transform.right = _currentDir;
         _rigidbody2D.MovePosition(transform.position+
-                                  transform.up*moveSpeed*
+                                  transform.right*moveSpeed*
                                   Time.fixedDeltaTime);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("Trigger Test!");
+        if (other.CompareTag("Player"))
+        {
+            Debug.Log("Trigger Test!");
+            Destroy(this.gameObject);
+        }
     }
 }

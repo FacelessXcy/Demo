@@ -9,7 +9,9 @@ using UnityEditor;
 public enum ItemType
 {
     HealItem,
-    Diamond
+    Diamond,
+    DingXiangYu,
+    HaiZao
 }
 public class InventorySystem : MonoSingleton<InventorySystem>
 {
@@ -33,6 +35,14 @@ public class InventorySystem : MonoSingleton<InventorySystem>
         if (!_itemDic.ContainsKey(ItemType.Diamond))
         {
             _itemDic.Add(ItemType.Diamond,0);
+        }
+        if (!_itemDic.ContainsKey(ItemType.DingXiangYu))
+        {
+            _itemDic.Add(ItemType.DingXiangYu,0);
+        }
+        if (!_itemDic.ContainsKey(ItemType.HaiZao))
+        {
+            _itemDic.Add(ItemType.HaiZao,0);
         }
     }
     
