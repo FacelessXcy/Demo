@@ -12,6 +12,7 @@ public class FallDown : MonoBehaviour
 
     private Transform _player;
     private Rigidbody2D _rigidbody2D;
+    private bool _hasFall = false;
     void Start()
     {
         _player = GameObject.FindWithTag("Player").transform;
@@ -22,6 +23,10 @@ public class FallDown : MonoBehaviour
     
     void Update()
     {
+        if (_hasFall)
+        {
+            return;
+        }
         if (Mathf.Abs(_player.position.x - transform.position.x) <=
             horizontalDistance)
         {
@@ -30,6 +35,7 @@ public class FallDown : MonoBehaviour
             {
                 if (_rigidbody2D.isKinematic)
                 {
+                    _hasFall = true;
                     _rigidbody2D.isKinematic = false;
                 }
             }

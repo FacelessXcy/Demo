@@ -7,8 +7,7 @@ using Xcy.Common;
 
 public class CheckPointSave : MonoSingleton<CheckPointSave>
 {
-    private Vector3 _lastCheckPoint;
-    private Vector3 _lastChangeScenePoint;
+    public Vector3 lastCheckPoint;
 
     public override void Awake()
    {
@@ -18,12 +17,12 @@ public class CheckPointSave : MonoSingleton<CheckPointSave>
 
    public void UpdateCheckPoint(Vector3 checkPoint)
     {
-        _lastCheckPoint =checkPoint;
+        lastCheckPoint =checkPoint;
     }
 
    public Vector3 GetLastCheckPoint()
     {
-        return _lastCheckPoint;
+        return lastCheckPoint;
     }
 
 

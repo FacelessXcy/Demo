@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using Xcy.Battle;
 
 public class Attackable : MonoBehaviour
@@ -11,6 +12,7 @@ public class Attackable : MonoBehaviour
     public bool hideSelf;
     private float _curTime;
     private bool _active;
+    public UnityAction onHide;
     private void Start()
     {
         _curTime = intervalTime;
@@ -31,19 +33,30 @@ public class Attackable : MonoBehaviour
     }
     private void OnTriggerStay2D(Collider2D other)
     {
-        if (_active)
+        Damageable damageable = other.GetComponent<Damageable>();
+        if (damageable!=null)
         {
-            Damageable damageable = other.GetComponent<Damageable>();
-            if (damageable!=null)
+            if (_active)
             {
-                damageable.GetDamage(damage,this.gameObject);
+                _active = false;
+                if (damageable!=null)
+                {
+                    damageable.GetDamage(damage,this.gameObject);
+                    if (hideSelf)
+                    {
+                        if (onHide!=null)
+                        {
+                            onHide();
+                        }
+                        else
+                        {
+                            gameObject.SetActive(false);
+                        }
+                    }
+                }
+                //Destroy(this.gameObject);
             }
-            _active = false;
-            if (hideSelf)
-            {
-                gameObject.SetActive(false);
-            }
-            //Destroy(this.gameObject);
         }
+        
     }
 }
