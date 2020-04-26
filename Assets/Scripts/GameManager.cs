@@ -72,8 +72,6 @@ public class GameManager : MonoSingleton<GameManager>
     //        //Debug.Log("保存成功");
     //    }
     //}
-
-
     //private void LoadByJson()
     //{
     //    string filePath = Application.dataPath + "/SaveData" + "/SaveByJson.txt";

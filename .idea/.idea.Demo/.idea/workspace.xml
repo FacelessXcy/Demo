@@ -15,11 +15,9 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/UpdateUI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/FallDown.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/AI.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.lightweight@6.9.2/Runtime/2D/Light2D.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Xcy/DanMuGongJi/FireMode.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4CD14385-55E6-4C0E-AEDA-2393D3C9CF4A/26/5d0e99b5/Behaviour.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Collection.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/StartMenuPanel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Behavior Designer Movement/Scripts/Tasks/Patrol.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4CD14385-55E6-4C0E-AEDA-2393D3C9CF4A/f4/017ce60c/Object.cs" root0="SKIP_HIGHLIGHTING" />
@@ -36,29 +34,25 @@
     <setting file="file://$PROJECT_DIR$/Assets/Behavior Designer Movement/Scripts/MovementUtility.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyInput.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Behavior Designer/Runtime/Tasks/Actions/Log.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/SceneLoad.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Xcy/ReboundAndMouseFollow/Bullet.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyStateController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/AliveZone.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/AI/ExitSeek.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/TrapSonSon.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/InventorySystem/PickUp/DingXiangYuPickUp.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Xcy/SceneLoadManager/SceneLoadManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/CheckPoint.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/CheckPointSave.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/InventorySystem/PickUp/HaiZaoPickUp.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Xcy/Common/MonoSingleton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/AI/StartIdle.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Background.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Xcy/UIFramework/BasePanel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/AIHorizontalVersion.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/BGMChangePoint.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/DamagableWall.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ChangeScenePoint.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/InventorySystem/PickUp/PickUpItem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Behavior Designer/Runtime/Tasks/Composites/Sequence.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/Attackable.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerToGround.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/OilBubble.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/InventorySystem/PickUp/DiamondPickUp.cs" root0="FORCE_HIGHLIGHTING" />
@@ -110,7 +104,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/AI/CanSeePlayer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/AI/IsInState.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/AI/IsInAttackRange.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AIHorizontalVersion.cs" />
@@ -131,26 +124,17 @@
         <option value="$PROJECT_DIR$/Assets/Test/Test2.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Trap.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/TrapSonSon.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/GamingUIPanel.cs" />
         <option value="$PROJECT_DIR$/Assets/Xcy/Battle/Health.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GlobalObject.cs" />
         <option value="$PROJECT_DIR$/Assets/Xcy/Common/MonoSingleton.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/CheckPoint.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ChangeScenePoint.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ChangeScene.cs" />
         <option value="$PROJECT_DIR$/Assets/Class/Save.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/LoadingScene.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/SaveManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/PauseMenuPanel.cs" />
         <option value="$PROJECT_DIR$/Assets/Xcy/SceneLoadManager/SceneLoadManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/StartMenuPanel.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerAttribute.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerAttack.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/Attackable.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyStateController.cs" />
         <option value="$PROJECT_DIR$/Assets/Xcy/Utility/SimpleObjectPool.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/InventorySystem/PickUp/DingXiangYuPickUp.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/InventorySystem/PickUp/HaiZaoPickUp.cs" />
@@ -159,8 +143,18 @@
         <option value="$PROJECT_DIR$/Assets/Test/TestScripts.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/ZuoYouMove.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/NiQiang.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/ElectricEel.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/ElectricEel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/Attackable.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/PauseMenuPanel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SaveManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/GamingUIPanel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/CheckPoint.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/CheckPointSave.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/LoadingScene.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyStateController.cs" />
       </list>
     </option>
   </component>
@@ -252,7 +246,7 @@
       <workItem from="1587822822205" duration="1263000" />
       <workItem from="1587824983010" duration="2369000" />
       <workItem from="1587830176116" duration="1890000" />
-      <workItem from="1587883711444" duration="3840000" />
+      <workItem from="1587883711444" duration="9553000" />
     </task>
     <servers />
   </component>

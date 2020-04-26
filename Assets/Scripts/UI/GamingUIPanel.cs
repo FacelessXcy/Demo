@@ -96,6 +96,10 @@ public class GamingUIPanel : BasePanel
     //收集物UI
     private void UpdateDiamondCollection(int num)
     {
+        if (collectionNum==null)
+        {
+            collectionNum = transform.Find("Collection/CollectionNum").GetComponent<Text>();
+        }
         collectionNum.text = num.ToString();
     }
 

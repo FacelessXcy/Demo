@@ -22,23 +22,23 @@ public class PlayerManager : MonoSingleton<PlayerManager>
     {
         _destoryOnLoad = true;
         base.Awake();
+        
+    }
+
+    private void Start()
+    {
+        _health = GetComponent<Health>();
+        _health.onDamaged = OnDamage;
+        _health.onHealed = OnHeal;
+        _health.onDied = OnDie;
         if (GameManager.Instance.needLoadData)
         {
             GameManager.Instance.needLoadData = false;
             GameManager.Instance.LoadData();
         }
-    }
-
-    private void Start()
-    {
         moveParticleSystem = transform.Find("MoveParticle").GetComponent<ParticleSystem>();
         _psEmissionModule = moveParticleSystem.emission;
         _spriteRenderer=GetComponent<SpriteRenderer>();
-        
-        _health = GetComponent<Health>();
-        _health.onDamaged = OnDamage;
-        _health.onHealed = OnHeal;
-        _health.onDied = OnDie;
     }
 
 
@@ -55,7 +55,7 @@ public class PlayerManager : MonoSingleton<PlayerManager>
 
     private void OnDie()
     {
-        StartCoroutine(OnDieCorout(CheckPoint.Instance.GetLastCheckPoint()));
+        StartCoroutine(OnDieCorout(CheckPointSave.Instance.GetLastCheckPoint()));
     }
     
     private void OnHeal(float healAmount)

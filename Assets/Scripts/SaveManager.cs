@@ -29,6 +29,7 @@ public class SaveManager : MonoSingleton<SaveManager>
     
     public void LoadData()//加载场景后，载入数据
     {
+        Debug.Log(PlayerManager.Instance.Health==null);
         PlayerManager.Instance.Health.maxHealth = _saveData.maxHp;
         PlayerManager.Instance.Health.currentHealth =
             _saveData.currentHp;

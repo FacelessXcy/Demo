@@ -1231,11 +1231,9 @@
           <e p="AIHorizontalVersion.cs" t="Include" />
           <e p="AliveZone.cs" t="Include" />
           <e p="Background.cs" t="Include" />
-          <e p="BGMChangePoint.cs" t="Include" />
           <e p="ChangeScene.cs" t="Include" />
           <e p="ChangeScenePoint.cs" t="Include" />
-          <e p="CheckPoint.cs" t="Include" />
-          <e p="Collection.cs" t="Include" />
+          <e p="CheckPointSave.cs" t="Include" />
           <e p="DamagableWall.cs" t="Include" />
           <e p="Enemy" t="Include">
             <e p="AI" t="Include">
@@ -1274,18 +1272,13 @@
           <e p="Player" t="Include">
             <e p="PlayerAnimatorController.cs" t="Include" />
             <e p="PlayerAttack.cs" t="Include" />
-            <e p="PlayerController.cs" t="Include" />
             <e p="PlayerFlyMovement.cs" t="Include" />
             <e p="PlayerInput.cs" t="Include" />
             <e p="PlayerManager.cs" t="Include" />
             <e p="PlayerMovement.cs" t="Include" />
           </e>
-          <e p="PlayerToGround.cs" t="Include" />
-          <e p="PM.cs" t="Include" />
           <e p="SaveManager.cs" t="Include" />
-          <e p="SceneLoad.cs" t="Include" />
           <e p="ShakeCamera.cs" t="Include" />
-          <e p="TrapSonSon.cs" t="Include" />
           <e p="UI" t="Include">
             <e p="GamingUIPanel.cs" t="Include" />
             <e p="PauseMenuPanel.cs" t="Include" />
@@ -1293,7 +1286,6 @@
             <e p="UIManager.cs" t="Include" />
             <e p="UpdateUI.cs" t="Include" />
           </e>
-          <e p="WheelAI.cs" t="Include" />
         </e>
         <e p="Test" t="Include">
           <e p="Test2.cs" t="Include" />

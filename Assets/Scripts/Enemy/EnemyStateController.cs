@@ -233,7 +233,7 @@ public class EnemyStateController : MonoBehaviour
     IEnumerator Die()
     {
         yield return new  WaitForSeconds(0.5f);
-        Debug.Log("诖误阵亡");
+        Debug.Log("怪物阵亡");
         gameObject.SetActive(false);
     }
 

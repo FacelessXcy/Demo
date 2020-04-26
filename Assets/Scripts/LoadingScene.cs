@@ -11,28 +11,13 @@ public class LoadingScene : MonoBehaviour
     public Text loadingText;
     
     private AsyncOperation _loadSceneAO;
-    private bool _beginAO;
+    private bool _beginAO=false;
     private float _runTime;
     private float _valueTarget;
     void Start()
     {
         loadingSlider.value = 0;
-        loadingText.text = (0*100).ToString() + " %";
-//        if (SceneManager.GetActiveScene().name=="Loading")
-//        {
-//            StartCoroutine(AsyncLoading());
-//        }
-        if (SceneLoadManager.Instance.LoadMode==SceneLoadMode.LoadByName)
-        {
-            _loadSceneAO=SceneManager.LoadSceneAsync(SceneLoadManager.Instance
-                .TargetSceneName);
-        }
-        else
-        {
-            _loadSceneAO=SceneManager.LoadSceneAsync(SceneLoadManager.Instance
-                .TargetSceneIndex);
-        }
-        _loadSceneAO.allowSceneActivation = false;
+        loadingText.text = 0+ " %";
         Time.timeScale = 1;
     }
 
@@ -40,12 +25,8 @@ public class LoadingScene : MonoBehaviour
     {
         if (!_beginAO)
         {
-            _runTime += Time.deltaTime;
-            if (_runTime>=1.0f)
-            {
-                StartCoroutine(AsyncLoading());
-                _beginAO = true;
-            }
+            StartCoroutine(AsyncLoading());
+            _beginAO = true;
         }
 
         if (_loadSceneAO!=null)
@@ -77,8 +58,16 @@ public class LoadingScene : MonoBehaviour
     }
     IEnumerator AsyncLoading()
     {
-        _loadSceneAO = SceneManager.LoadSceneAsync(SceneLoadManager.Instance
-            .TargetSceneName);
+        if (SceneLoadManager.Instance.LoadMode==SceneLoadMode.LoadByName)
+        {
+            _loadSceneAO=SceneManager.LoadSceneAsync(SceneLoadManager.Instance
+                .TargetSceneName);
+        }
+        else
+        {
+            _loadSceneAO=SceneManager.LoadSceneAsync(SceneLoadManager.Instance
+                .TargetSceneIndex);
+        }
         _loadSceneAO.allowSceneActivation = false;
         yield return _loadSceneAO;
         Debug.Log("异步完成");

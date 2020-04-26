@@ -7,18 +7,21 @@ using Xcy.UIFramework;
 
 public class PauseMenuPanel : BasePanel
 {
-    private Button _saveBtn;
+//    private Button _saveBtn;
     private Button _loadBtn;
     private Button _backToStartBtn;
     private Button _resumeGameBtn;
     public override void Start()
     {
         base.Start();
-        _saveBtn = transform.Find("SaveGame").GetComponent<Button>();
+//        _saveBtn = transform.Find("SaveGame").GetComponent<Button>();
         _loadBtn=transform.Find("LoadGame").GetComponent<Button>();
         _backToStartBtn=transform.Find("BackToStart").GetComponent<Button>();
         _resumeGameBtn=transform.Find("ResumeGame").GetComponent<Button>();
-        _saveBtn.onClick.AddListener(() => { Debug.Log("保存按键要删除，禁止手动保存");});
+//        _saveBtn.onClick.AddListener(() =>
+//        {
+//            Debug.Log("保存按键要删除，禁止手动保存");
+//        });
         _loadBtn.onClick.AddListener(()=>
             {
                 GameManager.Instance.LoadOnFile();

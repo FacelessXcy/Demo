@@ -7,7 +7,6 @@ using Xcy.Battle;
 public class Attackable : MonoBehaviour
 {
     public float damage;
-    private Collider2D _collider2D;
     public float intervalTime=1.5f;
     public bool hideSelf;
     private float _curTime;
@@ -32,16 +31,13 @@ public class Attackable : MonoBehaviour
     }
     private void OnTriggerStay2D(Collider2D other)
     {
-        //Debug.Log(other.name);
         if (_active)
         {
             Damageable damageable = other.GetComponent<Damageable>();
             if (damageable!=null)
             {
-            
                 damageable.GetDamage(damage,this.gameObject);
             }
-            
             _active = false;
             if (hideSelf)
             {
