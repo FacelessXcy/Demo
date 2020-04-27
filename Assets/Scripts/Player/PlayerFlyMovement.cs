@@ -11,10 +11,11 @@ public class PlayerFlyMovement : MonoBehaviour
     private float _horizontalMove;
     private float _verticalMove;
     public float walkSpeed;
+    public bool isMoving=true;
     void Start()
     {
         _rigidbody2D = GetComponent<Rigidbody2D>();
-        _rigidbody2D.isKinematic = true;
+        _rigidbody2D.isKinematic = false;
     }
 
     

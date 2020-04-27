@@ -9,7 +9,8 @@ public class Attackable : MonoBehaviour
 {
     public float damage;
     public float intervalTime=1.5f;
-    public bool hideSelf;
+    public bool hideSelfColPlayer;
+    public bool hideSelfColWall;
     private float _curTime;
     private bool _active;
     public UnityAction onHide;
@@ -39,23 +40,24 @@ public class Attackable : MonoBehaviour
             if (_active)
             {
                 _active = false;
-                if (damageable!=null)
+                damageable.GetDamage(damage,this.gameObject);
+                if (hideSelfColPlayer)
                 {
-                    damageable.GetDamage(damage,this.gameObject);
-                    if (hideSelf)
-                    {
-                        if (onHide!=null)
-                        {
-                            onHide();
-                        }
-                        else
-                        {
-                            gameObject.SetActive(false);
-                        }
+                    if (onHide!=null)
+                    { 
+                        onHide();
+                    }
+                    else
+                    { 
+                        gameObject.SetActive(false);
                     }
                 }
                 //Destroy(this.gameObject);
             }
+        }
+        else if(hideSelfColWall)
+        {
+            gameObject.SetActive(false);
         }
         
     }

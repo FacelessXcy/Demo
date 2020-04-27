@@ -18,7 +18,7 @@ namespace Xcy.Battle
 
         public void GetDamage(float damage,GameObject damageResource)
         {
-            //Debug.Log(name+"被"+damageResource.name+"击中");
+            //Debug.Log(name+"被"+damageResource.name+"击中",gameObject);
             if (_health!=null)
             {
                 _health.TakeDamage(damage,damageResource);

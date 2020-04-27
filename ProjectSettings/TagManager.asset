@@ -30,9 +30,9 @@ TagManager:
   - JumpPoint
   - EnemyBullet
   - OilCan
-  - 
-  - 
-  - 
+  - BossBall
+  - PlayerBullet
+  - CameraCollider
   - 
   - 
   - 

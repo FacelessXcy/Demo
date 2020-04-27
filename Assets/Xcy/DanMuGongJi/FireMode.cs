@@ -10,36 +10,37 @@ namespace Xcy.DanMu
 {
     public class FireMode : MonoBehaviour
     {
-        private SimpleObjectPool<BulletCharacter> _bulletPool;
-        public BulletCharacter bulletTemplate;
+        public float bulletSpeed;
+        private SimpleObjectPool<MonsterBulletCharacter> _bulletPool;
+        [FormerlySerializedAs("bulletTemplate")] public MonsterBulletCharacter monsterBulletTemplate;
         [FormerlySerializedAs("firPoint")] public Transform firePoint;
-        //public List<BulletCharacter> tempBullets;
+        //public List<MonsterBulletCharacter> tempBullets;
         void Start()
         {
-            //tempBullets = new List<BulletCharacter>();
-            _bulletPool=new SimpleObjectPool<BulletCharacter>
+            //tempBullets = new List<MonsterBulletCharacter>();
+            _bulletPool=new SimpleObjectPool<MonsterBulletCharacter>
             (FactoryMethod,ResetMethod,50);
         }
 
-        private void Update()
-        {
-            if (UnityEngine.Input.GetKeyDown(KeyCode.A))
-            {
-                FireShotGun();
-            }
-            if (UnityEngine.Input.GetKeyDown(KeyCode.S))
-            {
-                FireRound();
-            }
-            if (UnityEngine.Input.GetKeyDown(KeyCode.D))
-            {
-                FirRoundGroup();
-            }
-            if (UnityEngine.Input.GetKeyDown(KeyCode.F))
-            {
-                FireTurbine();
-            }
-        }
+//        private void Update()
+//        {
+//            if (UnityEngine.Input.GetKeyDown(KeyCode.A))
+//            {
+//                FireShotGun();
+//            }
+//            if (UnityEngine.Input.GetKeyDown(KeyCode.S))
+//            {
+//                FireRound();
+//            }
+//            if (UnityEngine.Input.GetKeyDown(KeyCode.D))
+//            {
+//                FirRoundGroup();
+//            }
+//            if (UnityEngine.Input.GetKeyDown(KeyCode.F))
+//            {
+//                FireTurbine();
+//            }
+//        }
 
         public void FireShotGun()
         {
@@ -68,7 +69,7 @@ namespace Xcy.DanMu
         /// <returns></returns>
         IEnumerator FirShotgunIEnu()
         {
-            Vector3 bulletDir = firePoint.transform.up; //由于资源的原因，我们这边的发射方向为物体的Up轴方向
+            Vector3 bulletDir = -firePoint.transform.right;
             Quaternion leftRota = Quaternion.AngleAxis(-30, Vector3.forward);
             Quaternion RightRota = Quaternion.AngleAxis(30, Vector3.forward); //使用四元数制造2个旋转，分别是绕Z轴朝左右旋转30度
             for (int i=0;i<10;i++)     //散弹发射次数
@@ -101,11 +102,11 @@ namespace Xcy.DanMu
         /// <returns></returns>
         IEnumerator FireRoundIEnu(int number,Vector3 creatPoint)
         {
-            Vector3 bulletDir = firePoint.transform.up;
-            Quaternion rotateQuate = Quaternion.AngleAxis(10, Vector3.forward);//使用四元数制造绕Z轴旋转10度的旋转
+            Vector3 bulletDir = -firePoint.transform.right;
+            Quaternion rotateQuate = Quaternion.AngleAxis(60, Vector3.forward);//使用四元数制造绕Z轴旋转10度的旋转
             for (int i=0;i< number; i++)    //发射波数
             {
-                for (int j=0;j<36;j++)
+                for (int j=0;j<6;j++)
                 {
                     AllocateBullet(bulletDir, creatPoint);
                     bulletDir = rotateQuate * bulletDir; //让发射方向旋转10度，到达下一个发射方向
@@ -121,9 +122,9 @@ namespace Xcy.DanMu
         /// <returns></returns>
         IEnumerator FirRoundGroupIEnu()
         {
-            Vector3 bulletDir = firePoint.transform.up;
+            Vector3 bulletDir = -firePoint.transform.right;
             Quaternion rotateQuate = Quaternion.AngleAxis(45, Vector3.forward);//使用四元数制造绕Z轴旋转45度的旋转
-            List<BulletCharacter> bullets = new List<BulletCharacter>();       //装入开始生成的8个弹幕
+            List<MonsterBulletCharacter> bullets = new List<MonsterBulletCharacter>();       //装入开始生成的8个弹幕
             for (int i=0;i<8;i++)
             {
                 var tempBullet = AllocateBullet(bulletDir, firePoint.transform.position);
@@ -135,7 +136,7 @@ namespace Xcy.DanMu
             {
                 bullets[i].speed = 0; //弹幕停止移动
                 RecycleBullet(bullets[i]);
-                StartCoroutine(FireRoundIEnu(6, bullets[i].transform.position));//通过之前弹幕的位置，生成多波多方向的圆形弹幕
+                StartCoroutine(FireRoundIEnu(3, bullets[i].transform.position));//通过之前弹幕的位置，生成多波多方向的圆形弹幕
             }
         }
     
@@ -145,7 +146,7 @@ namespace Xcy.DanMu
         /// <returns></returns>
         IEnumerator FireTurbineIEnu()
         {
-            Vector3 bulletDir = firePoint.transform.up;      //发射方向
+            Vector3 bulletDir = -firePoint.transform.right;      //发射方向
             Quaternion rotateQuate = Quaternion.AngleAxis(20, Vector3.forward);//使用四元数制造绕Z轴旋转20度的旋转
             float radius = 0.6f;        //生成半径
             float distance = 0.2f;      //每生成一次增加的距离
@@ -159,48 +160,48 @@ namespace Xcy.DanMu
             }
         }
         
-//        public BulletCharacter CreatBullet(Vector3 dir,Vector3 creatPoint)
+//        public MonsterBulletCharacter CreatBullet(Vector3 dir,Vector3 creatPoint)
 //        {
-//            BulletCharacter bulletCharacter = Instantiate(bulletTemplate, creatPoint, Quaternion.identity);
-//            bulletCharacter.gameObject.SetActive(true);
-//            bulletCharacter.dir = dir;
-//            tempBullets.Add(bulletCharacter);
-//            return bulletCharacter;
+//            MonsterBulletCharacter monsterBulletCharacter = Instantiate(monsterBulletTemplate, creatPoint, Quaternion.identity);
+//            monsterBulletCharacter.gameObject.SetActive(true);
+//            monsterBulletCharacter.dir = dir;
+//            tempBullets.Add(monsterBulletCharacter);
+//            return monsterBulletCharacter;
 //        }
 
-        public BulletCharacter AllocateBullet(Vector3 dir,Vector3 creatPoint)
+        public MonsterBulletCharacter AllocateBullet(Vector3 dir,Vector3 creatPoint)
         {
-            BulletCharacter temp= _bulletPool.Allocate();
+            MonsterBulletCharacter temp= _bulletPool.Allocate();
             temp.transform.position = creatPoint;
             temp.gameObject.SetActive(true);
             temp.enabled = true;
             temp.isMove = true;
-            temp.speed=3;
+            temp.speed=bulletSpeed;
             temp.FireMode = this;
             temp.dir = dir;
             return temp;
         }
 
-        public BulletCharacter FactoryMethod()
+        public MonsterBulletCharacter FactoryMethod()
         {
-            BulletCharacter bulletCharacter = Instantiate
-            (bulletTemplate, firePoint.position, Quaternion.identity);
-            bulletCharacter.isMove = false;
-            bulletCharacter.enabled = false;
-            bulletCharacter.gameObject.SetActive(false);
-            return bulletCharacter;
+            MonsterBulletCharacter monsterBulletCharacter = Instantiate
+            (monsterBulletTemplate, firePoint.position, Quaternion.identity);
+            monsterBulletCharacter.isMove = false;
+            monsterBulletCharacter.enabled = false;
+            monsterBulletCharacter.gameObject.SetActive(false);
+            return monsterBulletCharacter;
         }
 
-        public void RecycleBullet(BulletCharacter bulletCharacter)
+        public void RecycleBullet(MonsterBulletCharacter monsterBulletCharacter)
         {
-            _bulletPool.Recycle(bulletCharacter);
+            _bulletPool.Recycle(monsterBulletCharacter);
         }
         
-        public void ResetMethod(BulletCharacter bulletCharacter)
+        public void ResetMethod(MonsterBulletCharacter monsterBulletCharacter)
         {
-            bulletCharacter.isMove = false;
-            bulletCharacter.enabled = false;
-            bulletCharacter.gameObject.SetActive(false);
+            monsterBulletCharacter.isMove = false;
+            monsterBulletCharacter.enabled = false;
+            monsterBulletCharacter.gameObject.SetActive(false);
         }
         
     }

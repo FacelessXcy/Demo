@@ -13,12 +13,34 @@ public class ElectricEel : MonoBehaviour
     private Vector2 _targetDir;
     private Vector2 _currentDir;
     private float _distance = 0;
+    private Health _health;
+    private SpriteRenderer _spriteRenderer;
     void Start()
     {
+        _spriteRenderer=GetComponent<SpriteRenderer>();
+        _health = GetComponent<Health>();
+        _health.onDied += onDied;
+        _health.onDamaged += OnDamage;
         _player = GameObject.FindWithTag("Player").transform;
         _rigidbody2D = GetComponent<Rigidbody2D>();
 
     }
+    private void onDied()
+    {
+        gameObject.SetActive(false);
+    }
+
+    private void OnDamage(float damage,GameObject go)
+    {
+        StartCoroutine(ChangeColor());//受伤动画
+    }
+    IEnumerator ChangeColor()
+    {
+        _spriteRenderer.color = Color.red;
+        yield return new WaitForSeconds(1.5f);
+        _spriteRenderer.color = Color.white;
+    }
+
     private void FixedUpdate()
     {
         _distance = (_player.position - transform.position).magnitude;

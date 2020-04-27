@@ -2,12 +2,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Xcy.Battle;
 
 namespace Xcy.DanMu
 {
-    public class BulletCharacter : MonoBehaviour
+    public class MonsterBulletCharacter : MonoBehaviour
     {
-        
+        public int damage;
         [HideInInspector]public Vector3 dir;
         [HideInInspector]public float speed;
         [HideInInspector]public bool isMove;
@@ -24,8 +25,7 @@ namespace Xcy.DanMu
             _liveTime = 5.0f;
             isMove = true;
         }
-
-        // Update is called once per frame
+        
         void Update()
         {
             if (isMove)
@@ -54,6 +54,14 @@ namespace Xcy.DanMu
 
         private void OnTriggerEnter2D(Collider2D other)
         {
+            Debug.Log(other.name,gameObject);
+            if (!other.CompareTag("Player"))
+            {
+                return;
+            }
+            
+            Damageable damageable = other.GetComponent<Damageable>();
+            damageable?.GetDamage(damage,this.gameObject);
             if (_fireMode!=null)
             {
                 _fireMode.RecycleBullet(this);

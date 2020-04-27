@@ -1231,6 +1231,7 @@
           <e p="AIHorizontalVersion.cs" t="Include" />
           <e p="AliveZone.cs" t="Include" />
           <e p="Background.cs" t="Include" />
+          <e p="CameraTarget.cs" t="Include" />
           <e p="ChangePositionPoint.cs" t="Include" />
           <e p="CheckPoint.cs" t="Include" />
           <e p="CheckPointSave.cs" t="Include" />
@@ -1250,16 +1251,21 @@
             <e p="EnemyInput.cs" t="Include" />
             <e p="EnemyStateController.cs" t="Include" />
             <e p="FallDown.cs" t="Include" />
+            <e p="Launch.cs" t="Include" />
             <e p="NiGuai.cs" t="Include" />
             <e p="NiQiang.cs" t="Include" />
             <e p="OilBubble.cs" t="Include" />
+            <e p="PingYiGuai.cs" t="Include" />
+            <e p="SecondBoss.cs" t="Include" />
+            <e p="ShangXiaMove.cs" t="Include" />
+            <e p="ThirdBoss.cs" t="Include" />
             <e p="ZuoYouMove.cs" t="Include" />
           </e>
           <e p="Enemy.cs" t="Include" />
-          <e p="ExitGame.cs" t="Include" />
           <e p="FSMEnemyExit.cs" t="Include" />
           <e p="FSMExit.cs" t="Include" />
           <e p="GameManager.cs" t="Include" />
+          <e p="GuoChangChangJIng.cs" t="Include" />
           <e p="InventorySystem" t="Include">
             <e p="InventorySystem.cs" t="Include" />
             <e p="PickUp" t="Include">
@@ -1273,7 +1279,10 @@
           <e p="Player" t="Include">
             <e p="PlayerAnimatorController.cs" t="Include" />
             <e p="PlayerAttack.cs" t="Include" />
+            <e p="PlayerBullet.cs" t="Include" />
+            <e p="PlayerFlyAttack.cs" t="Include" />
             <e p="PlayerFlyMovement.cs" t="Include" />
+            <e p="PlayerGame3Manager.cs" t="Include" />
             <e p="PlayerInput.cs" t="Include" />
             <e p="PlayerManager.cs" t="Include" />
             <e p="PlayerMovement.cs" t="Include" />
@@ -1317,8 +1326,8 @@
             <e p="Singleton.cs" t="Include" />
           </e>
           <e p="DanMuGongJi" t="Include">
-            <e p="BulletCharacter.cs" t="Include" />
             <e p="FireMode.cs" t="Include" />
+            <e p="MonsterBulletCharacter.cs" t="Include" />
           </e>
           <e p="Factory" t="Include">
             <e p="FactoryManager.cs" t="Include" />

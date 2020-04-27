@@ -11,7 +11,6 @@ using UnityEditor;
 
 public class PlayerManager : MonoSingleton<PlayerManager>
 {
-    public float power;
     public ParticleSystem moveParticleSystem;
     private Health _health;
     public Health Health => _health;
@@ -22,15 +21,14 @@ public class PlayerManager : MonoSingleton<PlayerManager>
     {
         _destoryOnLoad = true;
         base.Awake();
-        
     }
 
     private void Start()
     {
         _health = GetComponent<Health>();
-        _health.onDamaged = OnDamage;
-        _health.onHealed = OnHeal;
-        _health.onDied = OnDie;
+        _health.onDamaged += OnDamage;
+        _health.onHealed += OnHeal;
+        _health.onDied += OnDie;
         if (GameManager.Instance.needLoadData)
         {
             GameManager.Instance.needLoadData = false;
@@ -45,8 +43,6 @@ public class PlayerManager : MonoSingleton<PlayerManager>
     private void OnDamage(float realDamageAmount,GameObject damageSource)
     {
         isDamaging = true;//
-//        PlayerMovement.Instance.Rigidbody2D.AddForce(((Vector2)(transform
-//        .position -damageSource.transform.position)*power));
         ShakeCamera.instance.enabled = true;//镜头抖动
         UIManager.Instance.UpdateAllGamingUI();//更新血量UI
         StartCoroutine(ChangeColor());//受伤动画
@@ -68,7 +64,7 @@ public class PlayerManager : MonoSingleton<PlayerManager>
     {
         PlayerAnimatorController.Instance.SetDeadTrigger();
         UIManager.Instance.FadeAnimation();
-        yield return new WaitForSeconds(1.0f);
+        yield return new WaitForSeconds(0.8f);
         ResetHP();
         ResetPosition(checkPoint);
         UIManager.Instance.UpdateAllGamingUI();

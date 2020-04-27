@@ -97,7 +97,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 2
   intervalTime: 1.5
-  hideSelf: 1
+  hideSelfColPlayer: 1
+  hideSelfColWall: 0
 --- !u!95 &5122375601881013775
 Animator:
   serializedVersion: 3

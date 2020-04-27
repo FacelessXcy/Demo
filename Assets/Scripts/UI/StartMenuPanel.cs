@@ -19,7 +19,7 @@ public class StartMenuPanel : BasePanel
         _exitGameBtn=transform.Find("ExitGame").GetComponent<Button>();
         _startGameBtn.onClick.AddListener(() =>
         {
-            SceneLoadManager.Instance.LoadNewScene("Game1Scene");
+            SceneLoadManager.Instance.LoadNewScene("Game2Scene");
         });
         _exitGameBtn.onClick.AddListener(() =>
         {

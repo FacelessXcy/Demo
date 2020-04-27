@@ -9,6 +9,7 @@ public class CheckPoint : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            Debug.Log("Save Position");
             CheckPointSave.Instance.UpdateCheckPoint(transform.position);
         }
     }
