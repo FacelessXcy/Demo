@@ -15,17 +15,17 @@ public class PauseMenuPanel : BasePanel
     {
         base.Start();
 //        _saveBtn = transform.Find("SaveGame").GetComponent<Button>();
-        _loadBtn=transform.Find("LoadGame").GetComponent<Button>();
+        //_loadBtn=transform.Find("LoadGame").GetComponent<Button>();
         _backToStartBtn=transform.Find("BackToStart").GetComponent<Button>();
         _resumeGameBtn=transform.Find("ResumeGame").GetComponent<Button>();
 //        _saveBtn.onClick.AddListener(() =>
 //        {
 //            Debug.Log("保存按键要删除，禁止手动保存");
 //        });
-        _loadBtn.onClick.AddListener(()=>
-            {
-                GameManager.Instance.LoadOnFile();
-            });
+//        _loadBtn.onClick.AddListener(()=>
+//            {
+//                GameManager.Instance.LoadOnFile();
+//            });
         _backToStartBtn.onClick.AddListener(() =>
         {
             SceneLoadManager.Instance

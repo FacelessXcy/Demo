@@ -27,16 +27,21 @@ namespace Xcy.SceneLoadManager
         public Sprite BackGroundImage => _backGroundImage;
         public string TipText => _tipText;
 
+        private bool _wanJie;
+
+        public bool WanJie => _wanJie;
+
         public void LoadNewScene(int sceneIndex,bool 
             saveData=false,bool loadData=false, Sprite backGroundImage =
              null,
-            string tipText = null)
+            string tipText = null,bool wanJie=false)
         {
             if (saveData)
             {
                 GameManager.Instance.SaveOnFile();
             }
 
+            _wanJie = wanJie;
             GameManager.Instance.needLoadData = loadData;
             _loadMode = SceneLoadMode.LoadByIndex;
             if (sceneIndex==(SceneManager.sceneCountInBuildSettings-1))
@@ -58,7 +63,7 @@ namespace Xcy.SceneLoadManager
 
         public void LoadNewScene(string sceneName,bool 
             saveData=false,bool loadData=false, Sprite backGroundImage = null,
-            string tipText = null)
+            string tipText = null,bool wanJie=false)
         {
             if (saveData)
             {
@@ -71,7 +76,7 @@ namespace Xcy.SceneLoadManager
             {
                 _backGroundImage = backGroundImage;
             }
-            
+            _wanJie = wanJie;
             if (tipText != null)
             {
                 _tipText = tipText;

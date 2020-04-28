@@ -9,6 +9,8 @@ public class LoadingScene : MonoBehaviour
 {
     public Slider loadingSlider;
     public Text loadingText;
+    public Image loadingImg;
+    public GameObject wanJieSaHua;
     
     private AsyncOperation _loadSceneAO;
     private bool _beginAO=false;
@@ -18,7 +20,25 @@ public class LoadingScene : MonoBehaviour
     {
         loadingSlider.value = 0;
         loadingText.text = 0+ " %";
+        loadingImg.sprite = SceneLoadManager.Instance.BackGroundImage;
         Time.timeScale = 1;
+        if (SceneLoadManager.Instance.WanJie)
+        {
+            wanJieSaHua.SetActive(true);
+        }
+        else
+        {
+            wanJieSaHua.SetActive(false);
+        }
+
+        if (SceneLoadManager.Instance.TargetSceneName=="Game3Scene")
+        {
+            loadingImg.color=Color.black;
+        }
+        else
+        {
+            loadingImg.color=Color.white;
+        }
     }
 
     void Update()

@@ -16,6 +16,7 @@ public class SecondBoss : MonoBehaviour
     private SpriteRenderer _spriteRenderer;
     private Transform _firePoint;
     private Transform _player;
+    private bool _isDead = false;
     [FormerlySerializedAs("fireStepTime")] public float fireIntervalTime;
     private float _currentTime=0.0f;
     void Start()
@@ -30,6 +31,10 @@ public class SecondBoss : MonoBehaviour
 
     private void Update()
     {
+        if (_isDead)
+        {
+            return;
+        }
         _distance = (transform.position - _player.position).magnitude;
         //Debug.Log(_distance);
         if (_distance<=attackRange)
@@ -54,8 +59,8 @@ public class SecondBoss : MonoBehaviour
 
     private void OnDied()
     {
+        _isDead = true;
         StartCoroutine(OnDiedIEnu());
-        
     }
 
     IEnumerator OnDiedIEnu()
@@ -63,7 +68,8 @@ public class SecondBoss : MonoBehaviour
         _spriteRenderer.enabled = false;
         GetComponent<Collider2D>().enabled = false;
         yield return new WaitForSeconds(1.5f);
-        SceneLoadManager.Instance.LoadNewScene("Game3Scene");
+        SceneLoadManager.Instance.LoadNewScene(
+            "Game3Scene",false,false,null,null,true);
     }
 
     private void OnDamage(float damage,GameObject sourceGo)

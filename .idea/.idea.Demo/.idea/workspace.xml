@@ -120,7 +120,6 @@
         <option value="$PROJECT_DIR$/Assets/Xcy/Common/MonoSingleton.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ChangeScene.cs" />
         <option value="$PROJECT_DIR$/Assets/Class/Save.cs" />
-        <option value="$PROJECT_DIR$/Assets/Xcy/SceneLoadManager/SceneLoadManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerAttribute.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerAttack.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy.cs" />
@@ -133,16 +132,11 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/ZuoYouMove.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/NiQiang.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/PauseMenuPanel.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SaveManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/GamingUIPanel.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/LoadingScene.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyStateController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ChangeScenePoint.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/FallDown.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CheckPointSave.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Seal.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ChangePositionPoint.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/PingYiGuai.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/Attackable.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/Boss.cs" />
@@ -155,17 +149,23 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/ShangXiaMove.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Game3Manager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CameraTarget.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/SecondBoss.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/ThirdBoss.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GuoChangChangJing.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/StartMenuPanel.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CheckPoint.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerGame3Manager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/ElectricEel.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/NiGuai.cs" />
         <option value="$PROJECT_DIR$/Assets/Xcy/Battle/Damageable.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/GamingUIPanel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Seal.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/PauseMenuPanel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/StartMenuPanel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ChangePositionPoint.cs" />
+        <option value="$PROJECT_DIR$/Assets/Xcy/SceneLoadManager/SceneLoadManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/SecondBoss.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GuoChangChangJing.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerGame3Manager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/LoadingScene.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerBullet.cs" />
       </list>
     </option>
@@ -261,6 +261,7 @@
       <workItem from="1587883711444" duration="18020000" />
       <workItem from="1587947041070" duration="19911000" />
       <workItem from="1587978705902" duration="4702000" />
+      <workItem from="1588034089589" duration="11089000" />
     </task>
     <servers />
   </component>

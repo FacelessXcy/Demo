@@ -167,6 +167,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 206a45e3f9e9f6d4b836c63e4ac9486f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  backGround: {fileID: 21300000, guid: 68f6715bcc4bd6941ae4184a4271470e, type: 3}
 --- !u!1 &5848066942506950490
 GameObject:
   m_ObjectHideFlags: 0

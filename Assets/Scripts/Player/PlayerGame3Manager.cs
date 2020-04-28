@@ -12,8 +12,7 @@ public class PlayerGame3Manager : MonoSingleton<PlayerGame3Manager>
     private Health _health;
     public Health Health => _health;
     private CameraTarget _cameraTarget;
-
-    private GameObject _wanJie;
+    
     public override void Awake()
     {
         _destoryOnLoad = true;
@@ -22,8 +21,6 @@ public class PlayerGame3Manager : MonoSingleton<PlayerGame3Manager>
 
     private void Start()
     {
-        _wanJie=GameObject.Find("通关撒花");
-        _wanJie.SetActive(false);
         _cameraTarget = GameObject.Find("CameraTarget")
             .GetComponent<CameraTarget>();
         _health = GetComponent<Health>();
@@ -48,14 +45,15 @@ public class PlayerGame3Manager : MonoSingleton<PlayerGame3Manager>
 
     public void Finish()
     {
-        _wanJie.SetActive(true);
+        //_wanJie.SetActive(true);
         StartCoroutine(FinishCor());
+        SceneManager.LoadScene("第三关过场");
     }
 
     IEnumerator FinishCor()
     {
         yield return new WaitForSeconds(5.0f);
 //        SceneLoadManager.Instance.LoadNewScene("第三关过场");
-        SceneManager.LoadScene("第三关过场");
+        //SceneManager.LoadScene("第三关过场");
     }
 }

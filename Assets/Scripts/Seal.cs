@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Xcy.SceneLoadManager;
 
 public class Seal : MonoBehaviour
 {
@@ -48,6 +49,7 @@ public class Seal : MonoBehaviour
             {
                 InventorySystem.Instance.RemoveItemAmount(
                     ItemType.HaiZao,3);
+                UIManager.Instance.UpdateAllGamingUI();
                 _state = 1;
                 _dirty.SetActive(false);
                 _clean.SetActive(true);
@@ -58,6 +60,7 @@ public class Seal : MonoBehaviour
             {
                 InventorySystem.Instance.RemoveItemAmount(
                     ItemType.DingXiangYu,3);
+                UIManager.Instance.UpdateAllGamingUI();
                 _state = 2;
                 for (int i = 0; i < _collider2Ds.Length; i++)
                 {

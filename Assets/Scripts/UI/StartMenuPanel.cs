@@ -7,7 +7,7 @@ using Xcy.UIFramework;
 
 public class StartMenuPanel : BasePanel
 {
-
+    public Sprite backGround;
     private Button _startGameBtn;
     private Button _exitGameBtn;
     
@@ -19,7 +19,8 @@ public class StartMenuPanel : BasePanel
         _exitGameBtn=transform.Find("ExitGame").GetComponent<Button>();
         _startGameBtn.onClick.AddListener(() =>
         {
-            SceneLoadManager.Instance.LoadNewScene("Game2Scene");
+            SceneLoadManager.Instance.LoadNewScene("Game1Scene",
+            false,false,backGround,null);
         });
         _exitGameBtn.onClick.AddListener(() =>
         {

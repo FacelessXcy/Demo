@@ -12,7 +12,8 @@ public class GamingUIPanel : BasePanel
     private Image fade;
     private Animation colorAnimation;
     public AnimationClip alpha;
-    private Text collectionNum;
+    private Text _haiZaoNum;
+    private Text _dingXiangYuNum;
     [SerializeField]private Image[] bloodCells=new Image[6];
     private bool _inThisPanel = false;
 
@@ -21,7 +22,8 @@ public class GamingUIPanel : BasePanel
         base.Start();
         fade = transform.Find("Fade").GetComponent<Image>();
         colorAnimation = fade.gameObject.GetComponent<Animation>();
-        collectionNum = transform.Find("Collection/CollectionNum").GetComponent<Text>();
+        _haiZaoNum = transform.Find("HaiZao/HaiZaoNum").GetComponent<Text>();
+        _dingXiangYuNum = transform.Find("DingXiangYu/DingXiangYuNum").GetComponent<Text>();
         if (bloodCell==null)
         {
             bloodCell = transform.Find("BloodBar/BloodCell").gameObject;
@@ -94,20 +96,32 @@ public class GamingUIPanel : BasePanel
         }
     }
     //收集物UI
-    private void UpdateDiamondCollection(int num)
+    private void UpdateHaiZaoCollection(int num)
     {
-        if (collectionNum==null)
+        if (_haiZaoNum==null)
         {
-            collectionNum = transform.Find("Collection/CollectionNum").GetComponent<Text>();
+            _haiZaoNum = transform.Find("HaiZao/HaiZaoNum").GetComponent<Text>();
         }
-        collectionNum.text = num.ToString();
+
+        
+        _haiZaoNum.text = num.ToString();
+    }
+    private void UpdateDingXiangYuCollection(int num)
+    {
+        if (_dingXiangYuNum==null)
+        {
+            _dingXiangYuNum = transform.Find("DingXiangYu/DingXiangYuNum").GetComponent<Text>();
+        }
+        _dingXiangYuNum.text = num.ToString();
     }
 
     public void UpdateAllGamingUI()
     {
         UpdateHpUI(PlayerManager.Instance.Health.currentHealth,
             PlayerManager.Instance.Health.maxHealth);
-        UpdateDiamondCollection(InventorySystem.Instance
-            .GetItemAmount(ItemType.Diamond));
+        UpdateHaiZaoCollection(InventorySystem.Instance
+            .GetItemAmount(ItemType.HaiZao));
+        UpdateDingXiangYuCollection(InventorySystem.Instance
+            .GetItemAmount(ItemType.DingXiangYu));
     }
 }
