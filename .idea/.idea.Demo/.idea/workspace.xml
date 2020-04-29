@@ -28,6 +28,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/LoadingScene.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Behavior Designer/Runtime/Tasks/Actions/Log.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerFlyAttack.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/TempAudioManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/AliveZone.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/InventorySystem/PickUp/DingXiangYuPickUp.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Xcy/SceneLoadManager/SceneLoadManager.cs" root0="FORCE_HIGHLIGHTING" />
@@ -100,7 +101,6 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/AI/IsInSight.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ChangePositionPoint.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/InventorySystem/InventorySystem.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/NewScripts/AudioManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/AI/StartSeek.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Xcy/Manager/LevelManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/ElectricEel.cs" root0="FORCE_HIGHLIGHTING" />
@@ -109,6 +109,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Xcy/Manager/GUIManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Behavior Designer Movement/Scripts/Tasks/CanSeeObject.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Behavior Designer Movement/Scripts/Tasks/CanHearObject.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Xcy/Manager/AudioManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerGame3Manager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerInput.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Behavior Designer Movement/Scripts/Tasks/Flee.cs" root0="FORCE_HIGHLIGHTING" />
@@ -116,7 +117,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/GlobalObject.cs" />
         <option value="$PROJECT_DIR$/Assets/Xcy/Common/MonoSingleton.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ChangeScene.cs" />
         <option value="$PROJECT_DIR$/Assets/Class/Save.cs" />
@@ -148,7 +148,6 @@
         <option value="$PROJECT_DIR$/Assets/Xcy/DanMuGongJi/MonsterBulletCharacter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/ShangXiaMove.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Game3Manager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/CameraTarget.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/ThirdBoss.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CheckPoint.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
@@ -159,14 +158,16 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/GamingUIPanel.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Seal.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/PauseMenuPanel.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/StartMenuPanel.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ChangePositionPoint.cs" />
         <option value="$PROJECT_DIR$/Assets/Xcy/SceneLoadManager/SceneLoadManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/SecondBoss.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GuoChangChangJing.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerGame3Manager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/LoadingScene.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerBullet.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GuoChangChangJing.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/CameraTarget.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/SecondBoss.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/StartMenuPanel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/TempAudioManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerGame3Manager.cs" />
       </list>
     </option>
   </component>
@@ -262,6 +263,7 @@
       <workItem from="1587947041070" duration="19911000" />
       <workItem from="1587978705902" duration="4702000" />
       <workItem from="1588034089589" duration="11089000" />
+      <workItem from="1588150962773" duration="3982000" />
     </task>
     <servers />
   </component>

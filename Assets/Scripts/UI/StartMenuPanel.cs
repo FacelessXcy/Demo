@@ -14,6 +14,7 @@ public class StartMenuPanel : BasePanel
     public override void Start()
     {
         base.Start();
+        TempAudioManager.Instance.ChangeMusic(0);
         _startGameBtn =
             transform.Find("StartGame").GetComponent<Button>();
         _exitGameBtn=transform.Find("ExitGame").GetComponent<Button>();

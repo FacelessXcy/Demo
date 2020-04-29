@@ -47,6 +47,7 @@ public class PlayerGame3Manager : MonoSingleton<PlayerGame3Manager>
     {
         //_wanJie.SetActive(true);
         StartCoroutine(FinishCor());
+        //TempAudioManager.Instance.ChangeMusic(0);
         SceneManager.LoadScene("第三关过场");
     }
 

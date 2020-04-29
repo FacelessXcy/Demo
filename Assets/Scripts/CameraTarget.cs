@@ -9,6 +9,10 @@ public class CameraTarget : MonoBehaviour
     
     void Update()
     {
+        if (PlayerInput.Instance.gameIsPaused)
+        {
+            return;
+        }
         if (isMoving)
         {
             transform.Translate(new Vector3(1,0,0)*speed);

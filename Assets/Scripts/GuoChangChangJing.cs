@@ -8,6 +8,7 @@ public class GuoChangChangJing : MonoBehaviour
 {
     private TextMesh _textMesh;
     private GameObject _saHua;
+    public Sprite loadingImg;
     private void Start()
     {
         _textMesh = transform.Find("Text").GetComponent<TextMesh>();
@@ -23,6 +24,7 @@ public class GuoChangChangJing : MonoBehaviour
         _textMesh.text = "游戏结束";
         _saHua.SetActive(true);
         yield return new WaitForSeconds(3.0f);
-        SceneLoadManager.Instance.LoadNewScene("StartScene");
+        SceneLoadManager.Instance.LoadNewScene("StartScene",false,
+        false,loadingImg,null,false);
     }
 }

@@ -96,7 +96,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8cef1e4003337814dbcb4e5841b21bcf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pickupClip: {fileID: 0}
+  pickupClip: {fileID: 8300000, guid: c130617c73a813e48905ee54c3316a50, type: 3}
 --- !u!114 &5193364683699474429
 MonoBehaviour:
   m_ObjectHideFlags: 0

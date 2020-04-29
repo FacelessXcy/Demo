@@ -68,6 +68,7 @@ public class SecondBoss : MonoBehaviour
         _spriteRenderer.enabled = false;
         GetComponent<Collider2D>().enabled = false;
         yield return new WaitForSeconds(1.5f);
+        TempAudioManager.Instance.ChangeMusic(1);
         SceneLoadManager.Instance.LoadNewScene(
             "Game3Scene",false,false,null,null,true);
     }
